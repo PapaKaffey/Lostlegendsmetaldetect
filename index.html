@@ -3,71 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Legends Metal Detection & Recovery | Southeast Nebraska & Southwest Iowa</title>
     <link rel="stylesheet" href="style.css">
-    <title>Lost Legends Metal Detection & Recovery</title>
+    <style>
+        /* Minimal additions only - no refactoring of existing CSS */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .button-group a,
+        .button-group button {
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .trust-section {
+            padding: 2rem 1rem;
+            background-color: #f5f5f5;
+        }
+        
+        .trust-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .trust-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .trust-item h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .services-section {
+            padding: 2rem 1rem;
+        }
+        
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-item {
+            background: white;
+            border-left: 4px solid black;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        
+        .service-item h3 {
+            margin-top: 0;
+            color: black;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .pricing-note {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .steps-section {
+            padding: 2rem 1rem;
+            background-color: #f5f5f5;
+        }
+        
+        .steps-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .step {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: black;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 40px;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .service-area-section {
+            padding: 2rem 1rem;
+        }
+        
+        .service-area-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .town-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        
+        .chip {
+            background: black;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-section {
+            padding: 2rem 1rem;
+            background-color: #f5f5f5;
+        }
+        
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-buttons a,
+        .contact-buttons button {
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
+        /* Tablet and Desktop */
+        @media (min-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 4rem 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .button-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .button-group a,
+            .button-group button {
+                width: auto;
+                flex: 1;
+                max-width: 200px;
+            }
+            
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .service-item {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .town-chips {
+                justify-content: center;
+            }
+            
+            .contact-buttons {
+                flex-direction: row;
+            }
+            
+            .contact-buttons a,
+            .contact-buttons button {
+                width: auto;
+                flex: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Lost Legends Logo">
-        </div>
-        <div class="call-button">
-            <a href="tel:+14023096379">Call Us</a>
+
+    <!-- Header with Logo and Call Button -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="/assets/logo.png" alt="Lost Legends Metal Detection & Recovery Logo" class="logo">
+                <div>
+                    <strong>Lost Legends</strong><br>
+                    <small>Metal Detection & Recovery</small>
+                </div>
+            </div>
+            <a href="tel:+14023096379" class="button">Call Now</a>
         </div>
     </header>
+
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to Lost Legends Metal Detection & Recovery</h1>
-        <p>Your adventure awaits!</p>
+        <h1>Find What You've Lost</h1>
+        <p>Professional metal detection & recovery across Southeast Nebraska & Southwest Iowa</p>
+        <div class="button-group">
+            <a href="tel:+14023096379" class="button">📞 Call</a>
+            <a href="sms:+14023096379" class="button">💬 Text</a>
+            <a href="https://wa.me/14023096379" class="whatsapp-button">WhatsApp</a>
+        </div>
+        <a href="#quote" class="button" style="background-color: #FFD700; color: black;">Get a Quote</a>
     </section>
-    <section class="trust-highlights">
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>Experienced Professionals</li>
-            <li>Fully Insured</li>
-            <li>Customer Satisfaction Guaranteed</li>
-        </ul>
+
+    <!-- Trust Highlights -->
+    <section class="trust-section">
+        <h2>Why Choose Lost Legends?</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h3>⚡ Fast Response</h3>
+                <p>Quick turnaround on your lost item search</p>
+            </div>
+            <div class="trust-item">
+                <h3>🏡 Respectful on Your Property</h3>
+                <p>We treat your land with care and attention</p>
+            </div>
+            <div class="trust-item">
+                <h3>🎯 Recovery-Focused</h3>
+                <p>Our mission is finding what matters to you</p>
+            </div>
+            <div class="trust-item">
+                <h3>💰 No Find, No Fee</h3>
+                <p>Lost items recovered with our guarantee</p>
+            </div>
+        </div>
     </section>
-    <section class="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Metal Detection - $100/hr</li>
-            <li>Recovery Services - $150/hr</li>
-            <li>Consultation - $50</li>
-        </ul>
+
+    <!-- Services & Pricing -->
+    <section class="services-section">
+        <h2>Our Services & Pricing</h2>
+        
+        <div class="service-item">
+            <h3>Lost Item Recovery</h3>
+            <p class="price">From $95</p>
+            <p>Find your lost jewelry, rings, keys, coins, and more. <strong>No find, no fee option available for lost items.</strong></p>
+        </div>
+        
+        <div class="service-item">
+            <h3>Yard & Property Metal Scanning</h3>
+            <p class="price">From $85</p>
+            <p>Comprehensive metal detection for residential properties, yards, and outdoor areas.</p>
+        </div>
+        
+        <div class="service-item">
+            <h3>Farmstead & Rural Property Search</h3>
+            <p class="price">From $125</p>
+            <p>Large-scale search for rural properties, homesteads, and expansive land areas.</p>
+        </div>
+        
+        <p class="pricing-note">Final price depends on travel distance, property size, and search conditions.</p>
     </section>
-    <section class="how-it-works">
+
+    <!-- How It Works -->
+    <section class="steps-section">
         <h2>How It Works</h2>
-        <p>We start with a consultation to assess your needs, then schedule a time for detection and recovery.</p>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Contact Us</h3>
+                <p>Call, text, or fill out our quote form with details about what you've lost</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Schedule Search</h3>
+                <p>We'll arrange a convenient time to search your property</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Professional Recovery</h3>
+                <p>We use advanced equipment and expertise to locate your lost item</p>
+            </div>
+        </div>
     </section>
-    <section class="service-area">
+
+    <!-- Service Area -->
+    <section class="service-area-section">
         <h2>Service Area</h2>
-        <p>Southeast Nebraska & Southwest Iowa including:</p>
-        <ul>
-            <li>Plattsmouth</li>
-            <li>Omaha</li>
-            <li>Nebraska City</li>
-            <li>Glenwood</li>
-            <li>Bellevue</li>
-            <li>Papillion</li>
-            <li>Louisville</li>
-            <li>Murray</li>
-            <li>Council Bluffs</li>
-        </ul>
+        <p style="text-align: center; color: #666;">Southeast Nebraska & Southwest Iowa</p>
+        <div class="town-chips">
+            <span class="chip">Plattsmouth, NE</span>
+            <span class="chip">Omaha, NE</span>
+            <span class="chip">Nebraska City, NE</span>
+            <span class="chip">Glenwood, IA</span>
+            <span class="chip">Bellevue, NE</span>
+            <span class="chip">Papillion, NE</span>
+            <span class="chip">Louisville, NE</span>
+            <span class="chip">Murray, NE</span>
+            <span class="chip">Council Bluffs, IA</span>
+        </div>
     </section>
-    <section class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
+
+    <!-- Contact & Quote Section -->
+    <section class="contact-section" id="quote">
+        <h2>Get Your Free Quote</h2>
+        
+        <div class="contact-info">
+            <p><strong>Call or Text Anytime</strong></p>
+            <p><a href="tel:+14023096379" style="color: black; text-decoration: none;"><strong>(402) 309-6379</strong></a></p>
+        </div>
+        
+        <div class="contact-buttons">
+            <a href="tel:+14023096379" class="button">📞 Call</a>
+            <a href="sms:+14023096379" class="button">💬 Text</a>
+            <a href="https://wa.me/14023096379" class="whatsapp-button">WhatsApp</a>
+        </div>
+
+        <!-- Simple Contact Form -->
+        <!-- Option 1: Using Formspree (recommended) -->
+        <!-- Replace YOUR_FORMSPREE_ID with your actual Formspree ID at https://formspree.io/ -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" style="max-width: 500px; margin: 0 auto;">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="message">Tell us what you've lost</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="button" style="width: 100%;">Send Quote Request</button>
         </form>
+
+        <!-- Option 2: If using Google Form, replace the form above with this embed code -->
+        <!-- Paste your Google Form embed code here -->
     </section>
+
+    <!-- Footer -->
     <footer>
-        <p>Contact us via <a href="https://wa.me/14023096379">WhatsApp</a> or call <a href="tel:+14023096379">(402) 309-6379</a></p>
+        <p>&copy; <span id="year"></span> Lost Legends Metal Detection & Recovery. All rights reserved.</p>
+        <p>Southeast Nebraska & Southwest Iowa | (402) 309-6379</p>
     </footer>
+
+    <script>
+        // Auto-update footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
