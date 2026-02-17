@@ -6,7 +6,7 @@
   --line-strong: rgba(25, 20, 16, 0.26);
 
   --text: #17120f;
-  --muted: #4f463d;
+  --muted: #3d352d;
 
   --brand: #c16d2f;
   --brand-strong: #8a491c;
@@ -137,7 +137,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #645749;
+  color: #53473b;
 }
 
 .top-nav {
@@ -283,11 +283,20 @@ textarea:focus-visible,
   font-size: 1.05rem;
 }
 
-.hero-ctas {
-  margin-top: 22px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+
+
+.hero-ctas .button--accent {
+  box-shadow: 0 12px 24px rgba(193, 109, 47, 0.28);
+}
+
+.hero-ctas .button--outline {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.34);
+  color: #fff;
+}
+
+.hero-ctas .button--outline:hover {
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .hero-points {
@@ -352,13 +361,13 @@ textarea:focus-visible,
 
 .metric span {
   font-size: 0.9rem;
-  color: #5f5448;
+  color: #4a4036;
 }
 
 .note {
   margin-top: 12px;
   font-size: 0.9rem;
-  color: #5f5448;
+  color: #4a4036;
 }
 
 .section {
@@ -427,7 +436,7 @@ textarea:focus-visible,
 .service-list {
   margin-top: 12px;
   padding-left: 18px;
-  color: #574d43;
+  color: #453c33;
 }
 
 .service-list li + li {
@@ -436,7 +445,7 @@ textarea:focus-visible,
 
 .section-note {
   margin-top: 12px;
-  color: #655a4f;
+  color: #51473d;
 }
 
 .gallery-grid {
@@ -467,7 +476,7 @@ textarea:focus-visible,
 .work-shot figcaption {
   padding: 11px 12px;
   font-size: 0.9rem;
-  color: #5a5045;
+  color: #473d34;
 }
 
 .process-grid {
@@ -525,10 +534,11 @@ textarea:focus-visible,
 }
 
 .quote-grid {
-  margin-top: 20px;
+  margin-top: 18px;
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
-  gap: 14px;
+  gap: 12px;
+  align-items: start;
 }
 
 .contact-panel {
@@ -566,17 +576,25 @@ textarea:focus-visible,
 }
 
 .form {
-  background: var(--surface-strong);
-  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #fffefc, #fffdf9);
+  border: 1px solid rgba(25, 20, 16, 0.2);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
-  padding: 20px;
+  padding: 18px;
 }
+
+.form-helper {
+  margin-bottom: 10px;
+  font-size: 0.86rem;
+  color: #4a4036;
+}
+
+
+
 
 .form-field + .form-field {
-  margin-top: 11px;
+  margin-top: 9px;
 }
-
 label {
   display: block;
   margin-bottom: 6px;
@@ -739,7 +757,7 @@ textarea::placeholder {
 .seo-copy {
   margin-top: 12px;
   max-width: 78ch;
-  color: #4b4239;
+  color: #3d342c;
 }
 
 .seo-copy strong {
@@ -762,8 +780,12 @@ textarea::placeholder {
   }
 
   .quote-grid {
-    grid-template-columns: 1fr;
-  }
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 12px;
+  align-items: start;
+}
 }
 
 @media (max-width: 780px) {
@@ -841,4 +863,6 @@ textarea::placeholder {
     transform: none;
   }
 }
+
+
 
