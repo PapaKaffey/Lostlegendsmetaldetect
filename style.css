@@ -1,12 +1,17 @@
 :root{
   --black:#111;
   --dark:#1a1a1a;
-  --gold:#d4af37;
+
+  /* Updated Earthy Branding */
+  --gold:#b35c1e;          /* darker clay instead of bright gold */
+  --accent-deep:#5a3219;   /* rich brown */
   --green:#25D366;
+
   --muted:#666;
   --bg:#ffffff;
   --card:#ffffff;
   --soft:#f4f4f6;
+
   --shadow: 0 14px 40px rgba(0,0,0,.08);
   --radius: 14px;
 }
@@ -22,6 +27,18 @@ body{
 }
 
 img{ display:block; max-width:100%; height:auto; }
+
+/* Brand typography & spacing */
+h1{
+  letter-spacing:-.6px;
+}
+h2{
+  font-size: 34px;
+  letter-spacing: -.4px;
+  margin-bottom: 26px;
+}
+.muted{ color: var(--muted); }
+
 
 /* Header */
 .header{
@@ -61,6 +78,9 @@ img{ display:block; max-width:100%; height:auto; }
   object-fit:contain;
   flex: 0 0 44px;
   border-radius: 10px;
+  background: rgba(179,92,30,.10);
+  border: 1px solid rgba(179,92,30,.20);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
 }
 
 .brand-text{
@@ -97,18 +117,20 @@ img{ display:block; max-width:100%; height:auto; }
 
 .button:hover{ transform: translateY(-1px); box-shadow: 0 10px 30px rgba(0,0,0,.10); }
 
-.button--dark{ background: var(--black); color:#fff; border-color: transparent; }
+.button--dark{ background: var(--ink); color:#fff; border-color: transparent; }
 .button--gold{ background: var(--gold); color:#111; border-color: transparent; }
+.button--accent{ background: var(--gold); color:#111; border-color: transparent; }
 .button--whatsapp{ background: var(--green); color:#fff; border-color: transparent; }
 .button--full{ width: 100%; }
 
 /* Hero */
 .hero{
   background:
-    linear-gradient(180deg, rgba(0,0,0,.74), rgba(0,0,0,.78)),
+    linear-gradient(180deg, rgba(40,28,18,.75), rgba(20,14,9,.82)),
+    radial-gradient(900px 400px at 50% 110%, rgba(179,92,30,.28), rgba(0,0,0,0)),
     url("IMG_5272.jpeg") center/cover no-repeat;
   color:#fff;
-  padding: 96px 16px 76px;
+  padding: 104px 16px 84px;
   text-align:center;
 }
 
@@ -214,14 +236,21 @@ h2{
 .service-item{
   background: #fff;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 22px 20px;
-  margin-bottom: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+  padding: 26px 24px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(0,0,0,.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.service-item:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 22px 60px rgba(0,0,0,.10);
 }
 
 .service-item h3{ margin-bottom: 8px; }
 .price{
-  color: var(--gold);
+  color: var(--accent);
   font-weight: 800;
   margin-bottom: 8px;
 }
@@ -241,6 +270,13 @@ h2{
 .gallery-grid img{
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  transition: transform .3s ease, filter .3s ease;
+  filter: contrast(1.05) saturate(.95);
+}
+
+.gallery-grid img:hover{
+  transform: scale(1.03);
+  filter: contrast(1.1) saturate(1);
 }
 
 /* Steps */
@@ -368,4 +404,37 @@ textarea{ min-height: 120px; resize: vertical; }
 @media (min-width: 900px){
   body{ padding-bottom: 0; }
   .mobilebar{ display:none; }
+}
+
+
+/* Featured service + QGIS add-on */
+.service-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 8px;
+}
+
+.service-item--featured{
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.service-addon{
+  margin-top: 14px;
+  padding: 16px 16px;
+  border-radius: var(--radius);
+  background: rgba(179,92,30,.07);
+  border: 1px solid rgba(179,92,30,.18);
+}
+
+.service-addon h4{
+  font-size: 14px;
+  letter-spacing: .2px;
+  margin-bottom: 6px;
+}
+
+.service-addon ul{
+  padding-left: 18px;
+  margin: 10px 0 12px;
 }
