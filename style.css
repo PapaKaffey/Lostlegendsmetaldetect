@@ -140,9 +140,12 @@ img{ max-width:100%; height:auto; display:block; }
 /* HERO */
 .hero{
   position: relative;
-  background: url("IMG_5272.jpeg") center/cover no-repeat;
-  color:#fff;
-  padding: 88px 0 64px;
+  background: url("Far.jpg") center center / cover no-repeat;
+  background-attachment: scroll;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
 }
 
 .hero__overlay{
