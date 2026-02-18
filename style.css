@@ -137,12 +137,13 @@ img{ max-width:100%; height:auto; display:block; }
   border-color: transparent;
 }
 
-/* HERO */
 .hero{
   position: relative;
-  background: url("IMG_5272.jpeg") center/cover no-repeat;
-  color:#fff;
-  padding: 88px 0 64px;
+  background: url("Far.jpg") center center / cover no-repeat;
+  background-attachment: scroll;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero__overlay{
@@ -447,4 +448,34 @@ h3{
   .top-nav{ display:none; }
   .brand__tag{ display:none; }
   .button--outline{ padding: 10px 12px; font-size: 13px; }
+}
+
+/* Premium micro-interactions */
+.button{
+  transition: transform .16s cubic-bezier(.2,.8,.2,1), box-shadow .16s cubic-bezier(.2,.8,.2,1), filter .16s;
+}
+.button:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+}
+.button:active{
+  transform: translateY(0px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.10);
+}
+
+.card, .shot, .step, .faq-item{
+  transition: transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s cubic-bezier(.2,.8,.2,1), border-color .18s;
+}
+.card:hover, .shot:hover, .step:hover, .faq-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 50px rgba(0,0,0,.12);
+  border-color: rgba(0,0,0,.12);
+}
+
+/* Better form focus */
+.form input:focus,
+.form textarea:focus{
+  outline: none;
+  border-color: rgba(201,106,27,.55);
+  box-shadow: 0 0 0 4px rgba(201,106,27,.18);
 }
