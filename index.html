@@ -7,12 +7,11 @@
   <link rel="stylesheet" href="style (3).css" />
 </head>
 
-<body>
   <!-- Header -->
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <img src="logo.jpeg" alt="Lost Legends Logo" class="brand-logo" />
+        <img src="logo.jpeg" alt="Lost Legends Logo" class="brand-logo">
         <div class="brand-text">
           <div class="brand-name">Lost Legends</div>
           <div class="brand-tag">Metal Detection &amp; Recovery</div>
@@ -28,7 +27,9 @@
         <a href="#faq">FAQ</a>
       </nav>
 
-      <a href="tel:+14023096379" class="call-btn">Call / Text (402) 309-6379</a>
+      <a href="tel:+14023096379" class="call-btn">
+        Call / Text (402) 309-6379
+      </a>
     </div>
   </header>
 
@@ -122,7 +123,7 @@
   </section>
 
   <!-- Recent Work -->
-  <section class="section section--paper" id="work">
+  <section class="section section--paper" id="recent">
     <div class="container">
       <div class="kicker">Recent Work</div>
       <h2>Professional process in the field</h2>
@@ -233,7 +234,7 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ Section -->
   <section class="faq-section" id="faq">
     <div class="container">
       <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -249,7 +250,7 @@
         <div class="faq-item">
           <button class="faq-question">How long does a search take?</button>
           <div class="faq-answer">
-            Most searches take 1-3 hours depending on area size and conditions.
+            Most searches take 1–3 hours depending on area size and conditions.
           </div>
         </div>
 
@@ -299,8 +300,9 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    document.querySelectorAll(".faq-question").forEach((btn) => {
+    
+    // FAQ functionality
+    document.querySelectorAll(".faq-question").forEach(btn => {
       btn.addEventListener("click", () => {
         btn.parentElement.classList.toggle("active");
       });
