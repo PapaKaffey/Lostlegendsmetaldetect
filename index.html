@@ -3,218 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lost Legends Metal Detection &amp; Recovery | Southeast Nebraska &amp; Southwest Iowa</title>
-
-  <meta name="description" content="Lost ring recovery and property metal scanning across Southeast Nebraska and Southwest Iowa. Fast response and no find, no fee option for eligible recoveries." />
-  <meta name="theme-color" content="#18120f" />
-
-  <meta property="og:title" content="Lost Legends Metal Detection &amp; Recovery" />
-  <meta property="og:description" content="Professional lost-item recovery, property metal scanning, and farmstead search service in Southeast Nebraska and Southwest Iowa." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="Closeup.jpg" />
-
-  <link rel="icon" href="logo.jpeg" />
+  <title>Lost Legends Metal Detection & Recovery | Southeast Nebraska & Southwest Iowa</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header" id="top">
-    <div class="shell header-content">
-      <a class="brand" href="#top" aria-label="Lost Legends home">
-        <img src="logo.jpeg" alt="Lost Legends Logo" class="brand__logo" />
-        <span class="brand__text">
-          <strong class="brand__name">Lost Legends</strong>
-          <small class="brand__tag">Metal Detection &amp; Recovery</small>
-        </span>
-      </a>
+  <!-- Top-left phone (like your screenshot) -->
+  <div class="topbar">
+    <a href="tel:+14023096379">Call (402) 309-6379</a>
+  </div>
 
-      <a class="btn btn--dark btn--pill" href="tel:+14023096379">Call Now</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header__inner">
+      <div class="brand">
+        <img src="logo.jpeg" class="brand__logo" alt="Lost Legends logo" />
+        <div class="brand__text">
+          <div class="brand__name">Lost Legends</div>
+          <div class="brand__tag">Metal Detection &amp; Recovery</div>
+        </div>
+      </div>
+
+      <a class="header__cta" href="tel:+14023096379">Call (402) 309-6379</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="shell hero-inner">
+  <section class="hero" id="top">
+    <div class="hero__overlay"></div>
+    <div class="hero__inner">
+      <div class="kicker">Southeast Nebraska &amp; Southwest Iowa</div>
       <h1>Find what matters with professional metal detection.</h1>
-      <p class="hero-sub">
-        Lost item recovery and property metal scanning across Southeast Nebraska &amp; Southwest Iowa.
+      <p class="hero-lead">
+        Lost Legends helps recover rings, jewelry, keys, and tools quickly and carefully. From neighborhoods to farmsteads,
+        every search is focused on results.
       </p>
 
-      <div class="hero-actions">
-        <a class="btn btn--dark" href="tel:+14023096379">📞 Call</a>
-        <a class="btn btn--dark" href="sms:+14023096379">💬 Text</a>
-        <a class="btn btn--wa" href="https://wa.me/14023096379" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn--gold" href="#quote">Get a Quote</a>
+      <div class="hero-ctas">
+        <a class="button button--dark" href="tel:+14023096379">Call</a>
+        <a class="button button--light" href="sms:+14023096379">Text</a>
+        <a class="button button--wa" href="https://wa.me/14023096379" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="button button--gold" href="#quote">Get a Quote</a>
       </div>
 
-      <div class="hero-bullets" aria-label="Highlights">
-        <span class="pill">Fast response</span>
-        <span class="pill">Respectful search techniques</span>
-        <span class="pill">No find, no fee option</span>
-      </div>
+      <ul class="hero-points">
+        <li>Fast response and flexible scheduling</li>
+        <li>Respectful search techniques on your property</li>
+        <li>No find, no fee option for eligible lost-item recoveries</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Need help today card -->
-  <section class="section section--tight">
-    <div class="shell">
-      <div class="callout-card">
-        <div class="callout-card__body">
-          <h2>Need help today?</h2>
-          <p>
-            Message or call and tell me what you lost and where. I’ll reply quickly and give you a clear plan and pricing.
-          </p>
+  <!-- Quick help card -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="card card--help">
+        <h2>Need help today?</h2>
+        <p>Message or call and tell me what you lost and where. I’ll reply quickly and give you a clear plan and pricing.</p>
 
-          <div class="callout-tags">
-            <span class="tag">1-on-1 communication</span>
-            <span class="tag">From $85</span>
-            <span class="tag">Southeast NE + SW IA</span>
-          </div>
+        <div class="pill-grid">
+          <div class="pill"><strong>1-on-1</strong><span>Direct communication</span></div>
+          <div class="pill"><strong>From $85</strong><span>Transparent starting rates</span></div>
+          <div class="pill"><strong>Wide area</strong><span>Southeast NE + SW IA</span></div>
         </div>
 
-        <div class="callout-card__actions">
-          <a class="btn btn--dark" href="tel:+14023096379">Call Now</a>
-          <a class="btn btn--outline" href="sms:+14023096379">Text</a>
+        <div class="help-ctas">
+          <a class="button button--dark button--full" href="tel:+14023096379">Call or Text Now</a>
+          <div class="muted">No pressure. We can confirm fit before scheduling.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section class="section" id="services">
-    <div class="shell">
-      <div class="section-head">
-        <p class="eyebrow">Services</p>
-        <h2>Recovery and scanning services</h2>
-      </div>
+  <section class="section section--soft" id="services">
+    <div class="container">
+      <div class="kicker">Services</div>
+      <h2>Recovery and scanning services</h2>
 
-      <div class="services-grid">
-        <article class="service-card">
+      <div class="grid-2">
+        <div class="service-card">
           <h3>Lost Item Recovery</h3>
-          <p class="price">From $95 | No find, no fee option</p>
+          <div class="price">From $95 | No find, no fee option</div>
           <p>Focused recovery for rings, keys, jewelry, tools, and other valuables lost outdoors.</p>
-          <ul class="service-list">
+          <ul>
             <li>Yards, fields, parks, event spaces</li>
             <li>Clear communication and careful recovery</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="service-card">
+        <div class="service-card">
           <h3>Yard and Property Metal Scanning</h3>
-          <p class="price">From $85</p>
-          <p>Cleanup and safety scanning to locate buried nails, scrap, and hidden metal debris.</p>
-          <ul class="service-list">
+          <div class="price">From $85</div>
+          <p>Cleanup and safety scanning to locate and remove buried nails, scrap, and hidden metal debris.</p>
+          <ul>
             <li>Residential lots and renovation areas</li>
             <li>Great for family and pet safety</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="service-card service-card--featured">
+        <div class="service-card service-card--accent">
           <h3>Farmstead and Rural Search</h3>
-          <p class="price">From $125 | Travel may apply</p>
+          <div class="price">From $125</div>
           <p>Large-area search for relics, buried metal, and lost valuables on farms and rural land.</p>
-          <ul class="service-list">
-            <li>Optional mapped find locations</li>
+          <ul>
+            <li>Optional mapped find locations (property pins)</li>
             <li>Historic overlay snapshots when data is available</li>
-            <li>Property pins showing recorded recovery points</li>
           </ul>
-        </article>
+        </div>
       </div>
 
-      <p class="section-note">Final pricing depends on travel distance, property size, and ground conditions.</p>
+      <p class="note">Final price depends on travel distance, property size, and conditions.</p>
     </div>
   </section>
 
-  <!-- Recent Work / Photos -->
-  <section class="section" id="work">
-    <div class="shell">
-      <div class="section-head">
-        <p class="eyebrow">Recent Work</p>
-        <h2>Professional process in the field</h2>
-      </div>
+  <!-- Recent Work -->
+  <section class="section section--paper" id="recent">
+    <div class="container">
+      <div class="kicker">Recent Work</div>
+      <h2>Professional process in the field</h2>
 
-      <div class="gallery-grid">
-        <figure class="work-shot">
-          <img src="Far.jpg" alt="Metal detecting in field at dusk" loading="lazy" />
+      <div class="gallery">
+        <figure class="shot">
+          <img src="Far.jpg" alt="Metal detecting in open ground" loading="lazy" />
           <figcaption>On-site search in open ground</figcaption>
         </figure>
-        <figure class="work-shot">
-          <img src="Closeup.jpg" alt="Close-up detector reading during recovery" loading="lazy" />
+
+        <figure class="shot">
+          <img src="Closeup.jpg" alt="Target confirmation and recovery precision" loading="lazy" />
           <figcaption>Target confirmation and recovery precision</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- Quote / Contact -->
-  <section class="section section--muted" id="quote">
-    <div class="shell">
-      <div class="section-head">
-        <p class="eyebrow">Request a Quote</p>
-        <h2>Tell me what you lost and where</h2>
-      </div>
+  <!-- Steps -->
+  <section class="section section--soft" id="how">
+    <div class="container">
+      <div class="kicker">How it works</div>
+      <h2>A clear 3-step recovery workflow</h2>
 
-      <div class="quote-grid">
-        <div class="quote-card">
-          <h3>Call / Text</h3>
-          <p class="big">
-            <a href="tel:+14023096379">(402) 309-6379</a>
-          </p>
-          <div class="quote-actions">
-            <a class="btn btn--dark" href="tel:+14023096379">Call</a>
-            <a class="btn btn--outline" href="sms:+14023096379">Text</a>
-            <a class="btn btn--wa" href="https://wa.me/14023096379" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Tell Us What Was Lost</h3>
+          <p>Call, text, or use the quote form with location details and timing.</p>
         </div>
 
-        <div class="quote-card">
-          <h3>Quick Form</h3>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Schedule the Search</h3>
+          <p>We align on scope, travel, and expected conditions before arrival.</p>
+        </div>
 
-          <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" required />
-            </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone (optional)</label>
-              <input id="phone" name="phone" type="tel" />
-            </div>
-
-            <div class="field">
-              <label for="message">What did you lose + where?</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button class="btn btn--dark btn--full" type="submit">Send</button>
-          </form>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Recover and Confirm</h3>
+          <p>Item recovery is verified on-site, with straightforward next steps either way.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Service Area -->
+  <section class="section section--paper" id="area">
+    <div class="container">
+      <div class="kicker">Service area</div>
+      <h2>Covering Southeast Nebraska and Southwest Iowa</h2>
+
+      <div class="chips">
+        <span class="chip">Plattsmouth, NE</span>
+        <span class="chip">Omaha, NE</span>
+        <span class="chip">Nebraska City, NE</span>
+        <span class="chip">Glenwood, IA</span>
+        <span class="chip">Bellevue, NE</span>
+        <span class="chip">Papillion, NE</span>
+        <span class="chip">Louisville, NE</span>
+        <span class="chip">Murray, NE</span>
+        <span class="chip">Council Bluffs, IA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="section section--soft" id="quote">
+    <div class="container">
+      <div class="kicker">Request a quote</div>
+      <h2>Start with a quick message</h2>
+
+      <div class="card">
+        <h3>Talk directly with Lost Legends</h3>
+        <p class="muted">Fastest response is by call or text. WhatsApp is also available.</p>
+
+        <div class="contact-big">(402) 309-6379</div>
+
+        <div class="contact-ctas">
+          <a class="button button--dark button--full" href="tel:+14023096379">Call</a>
+          <a class="button button--light button--full" href="sms:+14023096379">Text</a>
+          <a class="button button--wa button--full" href="https://wa.me/14023096379" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+
+        <form class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <div class="form-row">
+            <label>Your Name</label>
+            <input type="text" name="name" required />
+          </div>
+
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" name="email" required />
+          </div>
+
+          <div class="form-row">
+            <label>Phone (optional)</label>
+            <input type="tel" name="phone" />
+          </div>
+
+          <div class="form-row">
+            <label>Tell us what you’ve lost</label>
+            <textarea name="message" rows="5" required></textarea>
+          </div>
+
+          <button class="button button--gold button--full" type="submit">Send Quote Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
-    <div class="shell footer-inner">
-      <p><strong>Lost Legends Metal Detection &amp; Recovery</strong></p>
-      <p>Southeast Nebraska &amp; Southwest Iowa · <a href="tel:+14023096379">(402) 309-6379</a></p>
-      <p class="tiny">&copy; <span id="year"></span> Lost Legends</p>
+    <div class="container">
+      <div>© <span id="year"></span> Lost Legends Metal Detection &amp; Recovery</div>
+      <div class="muted">Southeast Nebraska &amp; Southwest Iowa | (402) 309-6379</div>
     </div>
   </footer>
 
-  <!-- Mobile bottom bar -->
-  <nav class="mobilebar" aria-label="Quick contact">
-    <a class="mobilebar-btn mobilebar-btn--call" href="tel:+14023096379">Call / Text</a>
-    <a class="mobilebar-btn mobilebar-btn--wa" href="https://wa.me/14023096379" target="_blank" rel="noopener">WhatsApp</a>
-  </nav>
+  <!-- Floating WhatsApp button -->
+  <a class="wa-fab" href="https://wa.me/14023096379" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    WhatsApp
+  </a>
+
+  <!-- Sticky bottom bar (this is what disappeared before) -->
+  <div class="mobilebar" aria-label="Sticky contact bar">
+    <div class="mobilebar__inner">
+      <a class="mobilebar__btn mobilebar__btn--dark" href="tel:+14023096379">Call / Text</a>
+      <a class="mobilebar__btn mobilebar__btn--wa" href="https://wa.me/14023096379" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
