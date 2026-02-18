@@ -7,22 +7,20 @@
   <title>Lost Legends Metal Detection & Recovery | Plattsmouth NE</title>
 
   <meta name="description" content="Professional metal detection and lost item recovery in Plattsmouth, Omaha, Nebraska City, and Southwest Iowa. Rings, jewelry, keys, farm fields, and rural property searches." />
-
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Lost Legends Metal Detection & Recovery" />
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg" />
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-
 <header class="site-header" id="top">
   <div class="shell header-inner">
 
-    <a class="brand" href="#top">
+    <a class="brand" href="#top" aria-label="Lost Legends home">
       <img src="logo.jpeg" alt="Lost Legends logo" class="brand__logo" />
       <span class="brand__text">
         <strong class="brand__name">Lost Legends</strong>
@@ -30,7 +28,7 @@
       </span>
     </a>
 
-    <nav class="top-nav">
+    <nav class="top-nav" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#how">How It Works</a>
@@ -46,22 +44,16 @@
   </div>
 </header>
 
+<main>
 
 <!-- ================= HERO ================= -->
-
-<section class="hero">
-
-  <div class="hero__overlay"></div>
+<section class="hero" aria-label="Hero">
+  <div class="hero__overlay" aria-hidden="true"></div>
 
   <div class="hero__inner">
+    <div class="hero__kicker">Southeast Nebraska &amp; Southwest Iowa</div>
 
-    <div class="hero__kicker">
-      Southeast Nebraska &amp; Southwest Iowa
-    </div>
-
-    <h1>
-      Uncover What Matters With Professional Metal Detection.
-    </h1>
+    <h1>Find what matters with professional metal detection.</h1>
 
     <p class="hero__lead">
       Fast, respectful lost item recovery and property metal scanning.
@@ -71,7 +63,7 @@
     <div class="hero__buttons">
       <a href="tel:+14023096379" class="button button--dark">Call</a>
       <a href="sms:+14023096379" class="button button--light">Text</a>
-      <a href="https://wa.me/14023096379" class="button button--whatsapp">WhatsApp</a>
+      <a href="https://wa.me/14023096379" class="button button--whatsapp" rel="noopener">WhatsApp</a>
       <a href="#quote" class="button button--gold">Get a Quote</a>
     </div>
 
@@ -80,155 +72,204 @@
       <li>Respectful recovery techniques on your property</li>
       <li>No find, no fee option for eligible recoveries</li>
     </ul>
-
   </div>
 </section>
 
-
 <!-- ================= SERVICES ================= -->
-
 <section id="services" class="section">
   <div class="shell">
     <h2>Recovery and scanning services</h2>
+    <p class="note">Transparent pricing, clear scope, and careful digging.</p>
 
-    <div class="service-grid">
+    <div class="grid-3" role="list">
 
-      <div class="service-card">
+      <div class="card card--featured" role="listitem">
         <h3>Lost Item Recovery</h3>
-        <p><strong>From $95</strong> | No find, no fee option</p>
-        <p>Focused recovery for rings, jewelry, keys, tools, and other valuables lost outdoors.</p>
+        <p class="price">From $95</p>
+        <p><strong>No find, no fee</strong> option available for eligible ring/jewelry recoveries.</p>
+        <ul class="list">
+          <li>Rings, jewelry, keys, tools</li>
+          <li>Yards, parks (with permission), beaches</li>
+          <li>Careful plugs & minimal turf impact</li>
+        </ul>
       </div>
 
-      <div class="service-card">
-        <h3>Yard & Property Metal Scanning</h3>
-        <p><strong>From $85</strong></p>
-        <p>Scanning to locate buried metal hazards, tools, or property markers.</p>
+      <div class="card" role="listitem">
+        <h3>Yard &amp; Property Metal Scanning</h3>
+        <p class="price">From $85</p>
+        <p>Scan to locate buried metal hazards, tools, property pins, and markers.</p>
+        <ul class="list">
+          <li>Before construction / landscaping</li>
+          <li>Find buried metal you keep hitting</li>
+          <li>Flagging / marking locations</li>
+        </ul>
       </div>
 
-      <div class="service-card">
-        <h3>Farmstead & Rural Search</h3>
-        <p><strong>From $125</strong></p>
+      <div class="card" role="listitem">
+        <h3>Farmstead &amp; Rural Search</h3>
+        <p class="price">From $125</p>
         <p>Large-area searches for relics, lost valuables, and rural property scanning.</p>
+        <ul class="list">
+          <li>Farmyards, fields, old home sites</li>
+          <li>Custom search plan by acreage</li>
+          <li>Optional history/map research add-on</li>
+        </ul>
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- ================= WORK ================= -->
-
-<section id="work" class="section alt">
+<section id="work" class="section section--soft">
   <div class="shell">
     <h2>Professional process in the field</h2>
+    <p class="note">Real searches. Real recoveries. Clean, careful technique.</p>
 
-    <div class="work-grid">
-      <img src="Closeup.jpg" alt="Metal detector scanning open field in Nebraska">
-      <img src="IMG_5272.jpeg" alt="On-site metal detection recovery at night">
+    <div class="gallery">
+      <figure class="shot">
+        <img src="Closeup.jpg" alt="Metal detector scanning an open field in Nebraska" loading="lazy" decoding="async">
+        <figcaption>Systematic grid scanning for consistent coverage.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="IMG_5272.jpeg" alt="On-site metal detection recovery at night" loading="lazy" decoding="async">
+        <figcaption>Flexible scheduling, including evening recoveries.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-
 <!-- ================= HOW IT WORKS ================= -->
-
 <section id="how" class="section">
   <div class="shell">
     <h2>A clear 3-step recovery workflow</h2>
 
-    <div class="steps-grid">
-      <div>
-        <h3>1. Tell us what was lost</h3>
-        <p>Call, text, or use the quote form with details and timing.</p>
+    <div class="steps">
+
+      <div class="step">
+        <div class="step__num">1</div>
+        <h3>Tell us what was lost</h3>
+        <p>Call, text, or use the quote form with details, timing, and the best guess of the drop zone.</p>
       </div>
 
-      <div>
-        <h3>2. Schedule the search</h3>
-        <p>We align on scope, travel, and expected conditions.</p>
+      <div class="step">
+        <div class="step__num">2</div>
+        <h3>Schedule the search</h3>
+        <p>We align on scope, travel, ground conditions, and whether the search qualifies for no find, no fee.</p>
       </div>
 
-      <div>
-        <h3>3. Recover and confirm</h3>
-        <p>Item recovery verified on-site with clear next steps.</p>
+      <div class="step">
+        <div class="step__num">3</div>
+        <h3>Recover and confirm</h3>
+        <p>We recover the item, confirm it on-site, and go over next steps (cleaning, repair, or safe storage).</p>
       </div>
+
     </div>
   </div>
 </section>
 
-
 <!-- ================= SERVICE AREA ================= -->
-
-<section id="area" class="section alt">
+<section id="area" class="section section--soft">
   <div class="shell">
     <h2>Serving Southeast Nebraska and Southwest Iowa</h2>
-
     <p>
       Plattsmouth, Omaha, Bellevue, Papillion, Nebraska City,
       Glenwood, Council Bluffs, and surrounding rural areas.
     </p>
+
+    <div class="chips" aria-label="Service area chips">
+      <span class="chip">Plattsmouth</span>
+      <span class="chip">Omaha</span>
+      <span class="chip">Bellevue</span>
+      <span class="chip">Papillion</span>
+      <span class="chip">Nebraska City</span>
+      <span class="chip">Glenwood</span>
+      <span class="chip">Council Bluffs</span>
+      <span class="chip">Rural / Farm</span>
+    </div>
+
+    <p class="note">Outside these areas? Text your location—travel may be available.</p>
   </div>
 </section>
 
-
-<!-- ================= QUOTE FORM ================= -->
-
+<!-- ================= QUOTE ================= -->
 <section id="quote" class="section">
   <div class="shell">
     <h2>Request a Quote</h2>
 
-    <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form">
+    <div class="quote-grid">
+      <div>
+        <p class="big">Fast help when you need it.</p>
+        <p class="note">
+          The faster we search (especially for rings), the better the odds.
+          Texting a quick photo of the area helps a lot.
+        </p>
 
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Tell us what was lost and where..." required></textarea>
+        <div class="inline-buttons" style="margin-top:12px;">
+          <a href="tel:+14023096379" class="button button--dark">Call Now</a>
+          <a href="sms:+14023096379" class="button button--light">Text Now</a>
+          <a href="https://wa.me/14023096379" class="button button--whatsapp" rel="noopener">WhatsApp</a>
+        </div>
 
-      <button type="submit" class="button button--gold">
-        Send Request
-      </button>
+        <p class="note" style="margin-top:12px;">
+          <strong>Tip:</strong> Include the item type, when it was lost, and your best guess of the drop zone.
+        </p>
+      </div>
 
-    </form>
-  </div>
-</section>
+      <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form" aria-label="Quote request form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone (optional)" inputmode="tel" />
+        <textarea name="message" placeholder="Tell us what was lost, when, and where (include city + details)..." required></textarea>
 
+        <button type="submit" class="button button--gold">
+          Send Request
+        </button>
 
-<!-- ================= FAQ ================= -->
-
-<section id="faq" class="section alt">
-  <div class="shell">
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-grid">
-      <details>
-        <summary>Do I need permission?</summary>
-        <p>Yes, you must have property owner permission before searching.</p>
-      </details>
-
-      <details>
-        <summary>How long does a search take?</summary>
-        <p>Most recoveries take 30 minutes to 2 hours depending on conditions.</p>
-      </details>
-
-      <details>
-        <summary>How does pricing work?</summary>
-        <p>Pricing depends on travel distance and search size. Some searches qualify for no find, no fee.</p>
-      </details>
-
-      <details>
-        <summary>What areas do you serve?</summary>
-        <p>We serve Southeast Nebraska and Southwest Iowa.</p>
-      </details>
-
-      <details>
-        <summary>What is no find, no fee?</summary>
-        <p>For eligible recoveries, you only pay if the item is found.</p>
-      </details>
+        <p class="note">We’ll reply as soon as possible. If urgent, calling/texting is fastest.</p>
+      </form>
     </div>
   </div>
 </section>
 
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section section--soft">
+  <div class="shell">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+
+      <details class="faq-item">
+        <summary>Do I need permission?</summary>
+        <p>Yes. You must have property owner permission before searching. For public areas, follow local rules.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long does a search take?</summary>
+        <p>Most recoveries take 30 minutes to 2 hours depending on conditions, target size, and search area.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How does pricing work?</summary>
+        <p>Pricing depends on travel distance, search size, and complexity. Some searches qualify for no find, no fee.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What areas do you serve?</summary>
+        <p>We serve Southeast Nebraska and Southwest Iowa. Travel outside the core area may be available by request.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is no find, no fee?</summary>
+        <p>For eligible recoveries, you only pay if the item is found. Eligibility depends on location, conditions, and scope.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
 
 <!-- ================= SEO BLOCK ================= -->
-
 <section class="section">
   <div class="shell">
     <h2>Metal Detection Services in Southeast Nebraska</h2>
@@ -242,18 +283,30 @@
   </div>
 </section>
 
+</main>
 
 <!-- ================= FOOTER ================= -->
-
 <footer class="footer">
   <div class="shell">
-    <p>&copy; 2026 Lost Legends Metal Detection & Recovery</p>
+    <p><strong>Lost Legends Metal Detection &amp; Recovery</strong></p>
+    <p class="tiny">
+      Call/Text: <a href="tel:+14023096379" style="color:#fff; text-decoration:underline;">(402) 309-6379</a>
+      &nbsp;•&nbsp;
+      WhatsApp: <a href="https://wa.me/14023096379" style="color:#fff; text-decoration:underline;" rel="noopener">Message</a>
+    </p>
+    <p class="tiny">&copy; 2026 Lost Legends Metal Detection &amp; Recovery</p>
   </div>
 </footer>
 
+<!-- ================= MOBILE BOTTOM BAR ================= -->
+<div class="mobilebar" role="navigation" aria-label="Quick actions">
+  <div class="mobilebar__inner">
+    <a class="mobilebar__btn mobilebar__btn--dark" href="tel:+14023096379">Call</a>
+    <a class="mobilebar__btn mobilebar__btn--wa" href="https://wa.me/14023096379" rel="noopener">WhatsApp</a>
+  </div>
+</div>
 
 <!-- ================= STRUCTURED DATA ================= -->
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -261,6 +314,8 @@
   "name": "Lost Legends Metal Detection & Recovery",
   "image": "https://papakaffey.github.io/Lostlegendsmetaldetect/logo.jpeg",
   "telephone": "+1-402-309-6379",
+  "url": "https://papakaffey.github.io/Lostlegendsmetaldetect/",
+  "priceRange": "$$",
   "areaServed": [
     "Plattsmouth NE",
     "Omaha NE",
@@ -275,4 +330,4 @@
 </script>
 
 </body>
-</html>my
+</html>
