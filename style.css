@@ -462,11 +462,13 @@ h3{
 }
 
 /* ================= ABOUT PHOTO ================= */
-.about__photo{
+.about-img{
   width: 100%;
+  aspect-ratio: 1 / 1;   /* forces square */
+  object-fit: cover;     /* crops nicely */
+  object-position: 50% 25%; /* shifts crop up toward your face */
   border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 14px 40px rgba(0,0,0,.10);
+  display: block;
 }
 
 /* ================= FOOTER ================= */
