@@ -256,6 +256,20 @@ summary:focus-visible{
 }
 .hero__callout strong{ color:#fff; }
 
+/* RingFinders trust link */
+.hero__trust{
+  margin: 14px auto 0;
+  max-width: 62ch;
+  font-weight: 800;
+  color: rgba(255,255,255,.92);
+  text-align: center;
+}
+.hero__trust a{
+  color: rgba(255,255,255,.92);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 480px){
   .hero{ min-height: 86vh; }
   .hero__lead{ font-size: 17px; }
@@ -462,13 +476,12 @@ h3{
 }
 
 /* ================= ABOUT PHOTO ================= */
-.about-img{
+.about__photo{
   width: 100%;
-  aspect-ratio: 1 / 1;   /* forces square */
-  object-fit: cover;     /* crops nicely */
-  object-position: 50% 25%; /* shifts crop up toward your face */
   border-radius: 14px;
-  display: block;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: var(--shadow);
+  display:block;
 }
 
 /* ================= FOOTER ================= */
@@ -479,7 +492,11 @@ h3{
   text-align:center;
 }
 
-.footer a{ color:#fff; text-decoration: underline; }
+.footer a{
+  color:#fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .footer a:hover{ opacity:.9; }
 
 .tiny{ opacity: .85; }
@@ -525,4 +542,60 @@ h3{
   .top-nav{ display:none; }
   .brand__tag{ display:none; }
   .button--outline{ padding: 10px 12px; font-size: 13px; }
+}
+
+/* ================= SERVICES LAYOUT ================= */
+.services__grid{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 950px){
+  .services__grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.service{
+  display: flex;
+  flex-direction: column;
+}
+
+.service__top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.service__prices{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.service__chip{
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 13px;
+  background: rgba(201,106,27,.10);
+  border: 1px solid rgba(201,106,27,.22);
+  color: rgba(0,0,0,.78);
+  white-space: nowrap;
+}
+
+.service__cta{
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+}
+
+/* ABOUT card spacing */
+.about__card .button{
+  margin-top: 10px;
 }
