@@ -476,8 +476,11 @@ h3{
 }
 
 /* ================= ABOUT PHOTO ================= */
-.about__photo{
+..about__photo{
   width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 25%;
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,.08);
   box-shadow: var(--shadow);
