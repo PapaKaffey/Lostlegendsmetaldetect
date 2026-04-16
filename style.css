@@ -240,6 +240,17 @@ summary:focus-visible{
   color: rgba(255,255,255,.92);
 }
 
+<ul class="hero__bullets">
+  <li>Statewide coverage across NE & IA</li>
+  <li>Proven track record of successful recoveries</li>
+  <li>Verified profile on TheRingFinders</li>
+</ul>
+
+<a href="https://theringfinders.com/Alex.Kaffey/" target="_blank" rel="noopener">
+  <img src="IMG_7499.png" alt="Member of The Ring Finders Network" class="trust-badge">
+</a>
+
+
 /* Mini checklist card */
 .hero__callout{
   margin: 18px auto 0;
