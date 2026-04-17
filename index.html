@@ -6,7 +6,6 @@
 
   <title>Lost Legends Metal Detection | Nebraska & Iowa's Best Recovery Specialist</title>
 
-  <!-- Fixed meta description (closed properly). Keep it concise. -->
   <meta name="description" content="Statewide lost item recovery and property pin locating in Nebraska and Iowa. Professional recovery specialist for rings, jewelry, and property markers." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Lost Legends Metal Detection &amp; Recovery" />
@@ -27,15 +26,26 @@
   <link rel="icon" type="image/jpeg" href="logo.jpeg" />
 
   <style>
-    /* Minimal skip-link style (visible on focus) */
-    .skip-link { position: absolute; left: -999px; top: auto; background: #000; color: #fff; padding: 8px 12px; z-index: 1000; }
+    /* Skip-link */
+    .skip-link { position: absolute; left: -999px; top: auto; background: #000; color: #fff; padding: 8px 12px; z-index: 1000; border-radius:4px; }
     .skip-link:focus { left: 8px; top: 8px; }
 
-    /* New Aesthetic Enhancements */
+    /* Layout & centering improvements for hero and trust badge */
+    .hero__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero background */
     .hero {
       position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                  url('IMG_0673.jpeg') no-repeat center center;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('IMG_0673.jpeg') no-repeat center center;
       background-size: cover;
       padding: 120px 0;
       color: #ffffff;
@@ -53,32 +63,67 @@
       color: #d4af37;
     }
 
+    /* Center trust badge and make responsive */
     .trust-badge-hero {
+      display: block;
+      margin: 12px auto 0;
       max-width: 140px;
+      width: 100%;
       height: auto;
-      margin-top: 25px;
       filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
-      transition: transform 0.2s;
+      transition: transform 0.18s ease;
+    }
+    .trust-badge-hero:hover { transform: scale(1.05); }
+
+    /* Responsive images & reduce CLS */
+    .brand__logo,
+    .gallery img,
+    .about__photo,
+    .trust-badge-hero,
+    .shot img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .trust-badge-hero:hover {
-      transform: scale(1.05);
+    .shot img { width: 100%; object-fit: cover; }
+
+    .hero__buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .gallery img {
-      border: 1px solid #d4af37;
+    /* Make buttons easier to tap */
+    .button {
+      padding: 10px 14px;
+      min-height: 44px;
+      line-height: 1;
+      border-radius: 6px;
+    }
+    .button:focus { outline: 3px solid #d4af37; outline-offset: 3px; }
+
+    /* Trust-bar adjustments */
+    .trust-bar .shell { max-width: 1100px; margin: 0 auto; }
+
+    /* Accessibility: visible focus for links */
+    a:focus { outline: 3px solid rgba(212,175,55,0.9); outline-offset: 3px; }
+
+    /* Responsive adjustments */
+    @media (max-width: 720px) {
+      .hero { padding: 80px 0; }
+      .hero h1 { font-size: 1.6rem; line-height: 1.15; }
+      .trust-bar .shell > div { display:flex; flex-direction:column; align-items:center; gap:10px; }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Skip to content for keyboard users -->
   <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header" id="top">
   <div class="shell header-inner">
-
     <a class="brand" href="#top" aria-label="Lost Legends home">
       <img src="logo.jpeg" alt="Lost Legends logo" class="brand__logo" width="64" height="64" />
       <span class="brand__text">
@@ -96,10 +141,9 @@
       <a href="#faq">FAQ</a>
     </nav>
 
-    <a href="tel:+14023096379" class="button button--outline">
+    <a href="tel:+14023096379" class="button button--outline" aria-label="Call Lost Legends">
       (402) 309-6379
     </a>
-
   </div>
 </header>
 
@@ -116,13 +160,13 @@
       <strong>superior results</strong> through relentless determination and professional equipment.
     </p>
 
-    <div class="hero__buttons">
+    <div class="hero__buttons" role="group" aria-label="Hero actions">
       <a href="tel:+14023096379" class="button button--dark">Call</a>
       <a href="sms:+14023096379" class="button button--light">Text</a>
       <a href="#quote" class="button button--gold">Get a Quote</a>
     </div>
 
-    <a href="https://theringfinders.com/" target="_blank" rel="noopener noreferrer">
+    <a href="https://theringfinders.com/" target="_blank" rel="noopener noreferrer" aria-label="Verified Member of The Ring Finders Network">
       <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" class="trust-badge-hero" width="140" height="140">
     </a>
   </div>
@@ -305,9 +349,8 @@
         </div>
       </div>
 
-      <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form">
+      <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form" aria-label="Request a quote">
         <input type="text" name="_gotcha" style="display:none" />
-        <!-- Redirect to a friendly thank-you page after submit -->
         <input type="hidden" name="_next" value="/thank-you.html" />
         <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
         <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
@@ -335,7 +378,6 @@
     <p class="tiny">&copy; 2026 Lost Legends</p>
   </div>
 </footer>
-
 
 <div class="mobilebar" role="navigation">
   <div class="mobilebar__inner">
