@@ -522,42 +522,48 @@ h3{
   right: 0;
   bottom: 0;
   z-index: 1100;
-  background: rgba(0,0,0,.75);
-  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,.82);
+  backdrop-filter: blur(14px);
   padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-  border-top: 1px solid rgba(255,255,255,.10);
+  border-top: 1px solid rgba(255,255,255,.12);
 }
 
 .mobilebar__inner{
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .mobilebar__btn{
-  border-radius: 14px;
-  padding: 14px 12px;
-  font-weight: 1000;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
+  border-radius: 12px;
+  padding: 13px 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.15s ease;
 }
 
-.mobilebar__btn--dark{ background:#151515; }
-.mobilebar__btn--wa{ background: var(--wa); }
+.mobilebar__btn:active {
+  transform: scale(0.97);
+}
+
+.mobilebar__btn--dark {
+  background: #1a1a1a;
+}
+
+.mobilebar__btn--wa {
+  background: #25D366 !important;  /* Force green */
+  color: #fff !important;
+}
 
 @media (min-width: 950px){
-  body{ padding-bottom: 0; }
-  .mobilebar{ display:none; }
+  body { padding-bottom: 0; }
+  .mobilebar { display: none; }
 }
-
-/* MOBILE HEADER + NAV */
-@media (max-width: 950px){
-  .top-nav{ display:none; }
-  .brand__tag{ display:none; }
-  .button--outline{ padding: 10px 12px; font-size: 13px; }
-}
-
 /* ================= SERVICES LAYOUT ================= */
 .services__grid{
   display: grid;
