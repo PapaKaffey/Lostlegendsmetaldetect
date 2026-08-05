@@ -15,15 +15,39 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lost Legends Metal Detection | Nebraska & Iowa's Best">
   <meta property="og:description" content="Statewide recovery for rings, jewelry, and property pins. The most determined specialist in NE and IA.">
-  <meta property="og:image" content="https://papakaffey.github.io/Lostlegendsmetaldetect/logo.jpeg">
+  <meta property="og:image" content="https://lostlegendsrecovery.com/logo.jpeg">
   <meta property="og:url" content="https://lostlegendsrecovery.com">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Preload stylesheet to reduce render-blocking -->
+  <!-- Preload stylesheet -->
   <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
 
   <link rel="icon" type="image/jpeg" href="logo.jpeg" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Lost Legends Metal Detection & Recovery",
+    "description": "Lost item recovery (rings, jewelry, and valuables) on a reward basis, property pin locating, water valve locating, and junk metal cleanup across Nebraska and Iowa.",
+    "url": "https://lostlegendsrecovery.com",
+    "telephone": "+1-402-309-6379",
+    "image": "https://lostlegendsrecovery.com/logo.jpeg",
+    "priceRange": "$$",
+    "areaServed": [
+      { "@type": "State", "name": "Nebraska" },
+      { "@type": "State", "name": "Iowa" }
+    ],
+    "serviceType": [
+      "Lost Item Recovery",
+      "Property Pin Locating",
+      "Water Valve Locating",
+      "Junk Metal Cleanup"
+    ]
+  }
+  </script>
 
   <style>
     /* Skip-link */
@@ -45,7 +69,7 @@
     /* Hero background */
     .hero {
       position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('IMG_0673.jpeg') no-repeat center center;
+      background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url('IMG_0673.jpeg') no-repeat center center;
       background-size: cover;
       padding: 120px 0;
       color: #ffffff;
@@ -53,14 +77,22 @@
     }
 
     .button--gold {
-      background-color: #d4af37 !important;
-      color: #000 !important;
+      background-color: #c9a227 !important;
+      color: #111 !important;
       border: none !important;
-      font-weight: bold;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.35);
     }
 
     .brand__name, .hero__kicker, .hero__lead strong {
-      color: #d4af37;
+      color: #c9a227;
+    }
+
+    .hero__kicker {
+      letter-spacing: 2px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
     }
 
     /* Center trust badge and make responsive */
@@ -100,15 +132,115 @@
       padding: 10px 14px;
       min-height: 44px;
       line-height: 1;
-      border-radius: 6px;
+      border-radius: 8px;
     }
-    .button:focus { outline: 3px solid #d4af37; outline-offset: 3px; }
+    .button:focus { outline: 3px solid #c9a227; outline-offset: 3px; }
 
     /* Trust-bar adjustments */
     .trust-bar .shell { max-width: 1100px; margin: 0 auto; }
 
     /* Accessibility: visible focus for links */
-    a:focus { outline: 3px solid rgba(212,175,55,0.9); outline-offset: 3px; }
+    a:focus { outline: 3px solid rgba(201,162,39,0.9); outline-offset: 3px; }
+
+    /* ===== Improved FAQ ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .faq-list details {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding: 4px 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.04);
+      transition: all 0.2s ease;
+    }
+
+    .faq-list details[open] {
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+      border-color: rgba(201, 162, 39, 0.4);
+    }
+
+    .faq-list summary {
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 0;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      padding-right: 30px;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.35rem;
+      color: #c9a227;
+      font-weight: 400;
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list details p {
+      margin: 0 0 18px;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    /* ===== Sticky Mobile Bar ===== */
+    .mobilebar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1100;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(14px);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .mobilebar__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .mobilebar__btn {
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-weight: 700;
+      font-size: 15px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff !important;
+    }
+
+    .mobilebar__btn--dark {
+      background: #1a1a1a;
+    }
+
+    .mobilebar__btn--wa {
+      background: #25D366 !important;
+    }
+
+    @media (min-width: 950px) {
+      .mobilebar { display: none; }
+    }
 
     /* Responsive adjustments */
     @media (max-width: 720px) {
@@ -136,7 +268,6 @@
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#area">Service Area</a>
       <a href="#quote">Quote</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -152,29 +283,25 @@
 <section class="hero" aria-label="Hero">
   <div class="hero__inner shell">
     <div class="hero__kicker">Serving All of Nebraska & All of Iowa</div>
-
     <h1>Reuniting You With What Matters Most</h1>
-
     <p class="hero__lead">
       Whether it’s a lost wedding ring or a buried property marker, I provide 
       <strong>superior results</strong> through relentless determination and professional equipment.
     </p>
-
     <div class="hero__buttons" role="group" aria-label="Hero actions">
       <a href="tel:+14023096379" class="button button--dark">Call</a>
       <a href="sms:+14023096379" class="button button--light">Text</a>
       <a href="#quote" class="button button--gold">Get a Quote</a>
     </div>
-
     <a href="https://theringfinders.com/" target="_blank" rel="noopener noreferrer" aria-label="Verified Member of The Ring Finders Network">
       <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" class="trust-badge-hero" width="140" height="140">
     </a>
   </div>
 </section>
 
-<div class="trust-bar" style="background: #1a1a1a; color: #fff; padding: 30px 0; text-align: center; border-top: 2px solid #d4af37; border-bottom: 2px solid #d4af37;">
+<div class="trust-bar" style="background: #1a1a1a; color: #fff; padding: 30px 0; text-align: center; border-top: 2px solid #c9a227; border-bottom: 2px solid #c9a227;">
   <div class="shell">
-    <p style="margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; color: #d4af37; font-weight: bold; font-size: 0.85rem;">Extensive Field Experience</p>
+    <p style="margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; color: #c9a227; font-weight: bold; font-size: 0.85rem;">Extensive Field Experience</p>
     <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; font-size: 0.95rem;">
       <div>✓ Hundreds of Items Recovered</div>
       <div>✓ Expert Property Pin Locating</div>
@@ -188,9 +315,7 @@
   <div class="shell">
     <h2>Statewide Services</h2>
     <p class="note">Professionalism and precision across both Nebraska and Iowa.</p>
-
     <div class="services__grid">
-
       <article class="card card--featured service">
         <div class="service__top">
           <h3>Lost Item Recovery</h3>
@@ -211,7 +336,7 @@
 
       <article class="card service">
         <div class="service__top">
-          <h3>Pinpointer Locating</h3>
+          <h3>Pinpoint Locating</h3>
           <div class="service__prices">
             <span class="service__chip">$75 / pin</span>
           </div>
@@ -243,7 +368,6 @@
           <li>Agricultural & residential debris removal</li>
         </ul>
       </article>
-
     </div>
   </div>
 </section>
@@ -252,18 +376,15 @@
   <div class="shell">
     <h2>A History of Successful Recoveries</h2>
     <p class="note">I take pride in outworking the competition to find your legends.</p>
-
     <div class="gallery">
       <figure class="shot">
         <img src="IMG_7475.jpeg" alt="Recovered 18k Cartier Trinity Gold Ring" loading="lazy" width="1200" height="800">
         <figcaption>Found: Authentic Cartier Trinity ring recovered in the field.</figcaption>
       </figure>
-
       <figure class="shot">
         <img src="IMG_0673.jpeg" alt="Alex conducting a systematic grid search" loading="lazy" width="1200" height="800">
         <figcaption>Systematic scanning for 100% ground coverage.</figcaption>
       </figure>
-
       <figure class="shot">
         <img src="IMG_5272.jpeg" alt="On-site metal detection recovery at night" loading="lazy" width="1200" height="800">
         <figcaption>Available 24/7 for urgent recoveries across the Midwest.</figcaption>
@@ -275,28 +396,24 @@
 <section id="about" class="section">
   <div class="shell">
     <h2>About Alex & Lost Legends</h2>
-
     <div class="quote-grid">
       <div>
         <p class="big">Young, determined, and dedicated to being the best in Nebraska & Iowa.</p>
-
         <p class="note">
           Hey, I'm <strong>Alex</strong>. I've built my reputation on a simple promise: 
           I will work harder and smarter than anyone else to find what you've lost. 
           Whether it's a luxury ring or a buried property line, I treat every search as a personal mission.
         </p>
-
         <ul class="list">
           <li><strong>Relentless Drive:</strong> I don't stop until every lead is exhausted.</li>
           <li><strong>Professionalism:</strong> Neat digging, tidy refills, and total privacy.</li>
           <li><strong>Vast Expertise:</strong> Expert knowledge of local soil conditions.</li>
         </ul>
       </div>
-
       <div class="about__sidebar">
         <img src="IMG_5575.jpeg" alt="Alex, Lost Legends Metal Detection Specialist" class="about__photo" loading="lazy" width="800" height="800">
         
-        <div class="card" style="margin-top:14px; border-left: 4px solid #d4af37;">
+        <div class="card" style="margin-top:14px; border-left: 4px solid #c9a227;">
           <h3 style="margin-bottom:6px;">Direct Line to Alex</h3>
           <p class="tiny">Text these details for the fastest response:</p>
           <ul class="list">
@@ -310,14 +427,12 @@
   </div>
 </section>
 
-<!-- Expanded FAQ section - SEO & Trust Optimized -->
 <section id="faq" class="section section--soft">
   <div class="shell">
     <h2>Frequently Asked Questions</h2>
     <p class="note">Everything you need to know about professional metal detection & recovery in Nebraska and Iowa.</p>
     
     <div class="faq-list">
-
       <details>
         <summary>What areas do you serve?</summary>
         <p>I serve <strong>all of Nebraska and all of Iowa</strong>. Whether you're in Omaha, Lincoln, Des Moines, Plattsmouth, Sioux City, or anywhere in between, I can travel to you — often the same day for urgent recoveries.</p>
@@ -369,7 +484,6 @@
         <summary>What items do you commonly recover?</summary>
         <p>Wedding bands, engagement rings, family heirlooms, watches, keys, phones, property pins, survey markers, and even larger lost tools or equipment on farms and job sites.</p>
       </details>
-
     </div>
   </div>
 </section>
@@ -377,12 +491,10 @@
 <section id="quote" class="section">
   <div class="shell">
     <h2>Request a Statewide Quote</h2>
-
     <div class="quote-grid">
       <div>
         <p class="big">The most reliable help in the Midwest.</p>
         <p class="note">Available for immediate travel to your location in NE or IA.</p>
-
         <div class="inline-buttons" style="margin: 20px 0;">
           <a href="tel:+14023096379" class="button button--dark">Call Now</a>
           <a href="sms:+14023096379" class="button button--light">Text Now</a>
@@ -390,18 +502,17 @@
       </div>
 
       <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form" aria-label="Request a quote">
-  <input type="text" name="_gotcha" style="display:none" />
-  <input type="hidden" name="_next" value="/thank-you.html" />
-
-  <input type="tel" name="phone" placeholder="Phone number (required)" required inputmode="tel" autocomplete="tel" />
-  <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
-  <input type="text" name="item" placeholder="What was lost? (ring, keys, etc.)" />
-  <input type="text" name="location" placeholder="Location / nearest town or address" />
-  <input type="text" name="when" placeholder="When was it lost? (optional)" />
-  <textarea name="message" placeholder="Any extra details that might help..." autocomplete="off"></textarea>
-
-  <button type="submit" class="button button--gold">Send Request</button>
-</form>
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="hidden" name="_next" value="/thank-you.html" />
+        <input type="tel" name="phone" placeholder="Phone number (required)" required inputmode="tel" autocomplete="tel" />
+        <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
+        <input type="text" name="item" placeholder="What was lost? (ring, keys, etc.)" />
+        <input type="text" name="location" placeholder="Location / nearest town or address" />
+        <input type="text" name="when" placeholder="When was it lost? (optional)" />
+        <textarea name="message" placeholder="Any extra details that might help..." autocomplete="off"></textarea>
+        <button type="submit" class="button button--gold">Send Request</button>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -409,7 +520,7 @@
 
 <footer class="footer" style="text-align: center; padding: 30px 0;">
   <div class="shell">
-    <a href="https://theringfinders.com/" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 20px;">
+    <a href="https://theringfinders.com/Alex.Kaffenberger/" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 20px;">
       <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" style="max-width: 120px; height: auto;" width="120" height="120">
     </a>
     
@@ -422,6 +533,7 @@
   </div>
 </footer>
 
+<!-- Sticky Mobile Bar -->
 <div class="mobilebar" role="navigation">
   <div class="mobilebar__inner">
     <a class="mobilebar__btn mobilebar__btn--dark" href="tel:+14023096379">Call</a>
@@ -429,3 +541,6 @@
     <a class="mobilebar__btn mobilebar__btn--wa" href="https://wa.me/14023096379" rel="noopener noreferrer">WhatsApp</a>
   </div>
 </div>
+
+</body>
+</html>
