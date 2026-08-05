@@ -681,3 +681,30 @@ h3{
   .hero h1 { font-size: 1.6rem; line-height: 1.15; text-align: center; }
   .trust-bar > .shell > div { flex-direction: column; align-items: center; gap: 10px; }
 }
+
+/* ===== Fix Mobile Header ===== */
+@media (max-width: 950px) {
+  .top-nav {
+    display: none !important;
+  }
+
+  .header-inner {
+    height: 68px;
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .brand__tag {
+    display: none; /* Hides "Metal Detection & Recovery" on mobile */
+  }
+
+  .brand__name {
+    font-size: 15px;
+  }
+
+  .button--outline {
+    padding: 8px 11px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
