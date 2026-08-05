@@ -293,7 +293,7 @@
       <a href="sms:+14023096379" class="button button--light">Text</a>
       <a href="#quote" class="button button--gold">Get a Quote</a>
     </div>
-    <a href="https://theringfinders.com/" target="_blank" rel="noopener noreferrer" aria-label="Verified Member of The Ring Finders Network">
+    <a href="https://theringfinders.com/Alex.Kaffenberger/" target="_blank" rel="noopener noreferrer" aria-label="Verified Member of The Ring Finders Network">
       <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" class="trust-badge-hero" width="140" height="140">
     </a>
   </div>
@@ -544,3 +544,40 @@
 
 </body>
 </html>
+
+<style>
+  /* ... all your existing styles ... */
+
+  @media (max-width: 720px) {
+    .hero { padding: 80px 0; }
+    .hero h1 { font-size: 1.6rem; line-height: 1.15; }
+    .trust-bar .shell > div { display:flex; flex-direction:column; align-items:center; gap:10px; }
+  }
+
+  /* ===== Fix Mobile Header ===== */
+  @media (max-width: 950px) {
+    .top-nav {
+      display: none !important;
+    }
+
+    .header-inner {
+      height: 68px;
+      padding: 0 12px;
+      gap: 10px;
+    }
+
+    .brand__tag {
+      display: none;
+    }
+
+    .brand__name {
+      font-size: 15px;
+    }
+
+    .button--outline {
+      padding: 8px 11px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+  }
+</style>
