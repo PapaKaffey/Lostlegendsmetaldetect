@@ -279,58 +279,6 @@
     }
   }
 
-/* ===== Enable Container Queries ===== */
-.shell,
-.services__grid,
-.quote-grid,
-.about__sidebar,
-.gallery {
-  container-type: inline-size;
-}
-
-/* ===== Services Cards - Container Query ===== */
-@container (max-width: 700px) {
-  .services__grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@container (min-width: 701px) {
-  .services__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ===== Quote Section - Container Query ===== */
-@container (max-width: 700px) {
-  .quote-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-}
-
-/* ===== About section photo + text ===== */
-@container (max-width: 600px) {
-  .quote-grid {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .about__photo {
-    max-width: 280px;
-    margin: 0 auto;
-  }
-}
-
-/* ===== Gallery ===== */
-@container (max-width: 600px) {
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
 
 /* Make Ring Finders badge larger */
 .trust-badge-hero {
