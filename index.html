@@ -390,15 +390,18 @@
       </div>
 
       <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form" aria-label="Request a quote">
-        <input type="text" name="_gotcha" style="display:none" />
-        <input type="hidden" name="_next" value="/thank-you.html" />
-        <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
-        <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
-        <input type="tel" name="phone" placeholder="Your Phone" inputmode="tel" autocomplete="tel" />
-        <textarea name="message" placeholder="What was lost and where in NE/IA?" required autocomplete="off"></textarea>
-        <button type="submit" class="button button--gold">Send Request</button>
-      </form>
-    </div>
+  <input type="text" name="_gotcha" style="display:none" />
+  <input type="hidden" name="_next" value="/thank-you.html" />
+
+  <input type="tel" name="phone" placeholder="Phone number (required)" required inputmode="tel" autocomplete="tel" />
+  <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
+  <input type="text" name="item" placeholder="What was lost? (ring, keys, etc.)" />
+  <input type="text" name="location" placeholder="Location / nearest town or address" />
+  <input type="text" name="when" placeholder="When was it lost? (optional)" />
+  <textarea name="message" placeholder="Any extra details that might help..." autocomplete="off"></textarea>
+
+  <button type="submit" class="button button--gold">Send Request</button>
+</form>
   </div>
 </section>
 
@@ -422,6 +425,7 @@
 <div class="mobilebar" role="navigation">
   <div class="mobilebar__inner">
     <a class="mobilebar__btn mobilebar__btn--dark" href="tel:+14023096379">Call</a>
+    <a class="mobilebar__btn mobilebar__btn--dark" href="sms:+14023096379">Text</a>
     <a class="mobilebar__btn mobilebar__btn--wa" href="https://wa.me/14023096379" rel="noopener noreferrer">WhatsApp</a>
   </div>
 </div>
