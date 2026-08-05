@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Lost Legends Metal Detection | Nebraska & Iowa's Best Recovery Specialist</title>
-
   <meta name="description" content="Statewide lost item recovery and property pin locating in Nebraska & Iowa. Specialist in rings, jewelry, and buried markers." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Lost Legends Metal Detection &amp; Recovery" />
@@ -19,10 +17,8 @@
   <meta property="og:url" content="https://lostlegendsrecovery.com">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Preload stylesheet -->
   <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
-
   <link rel="icon" type="image/jpeg" href="logo.jpeg" />
 
   <!-- LocalBusiness Schema -->
@@ -139,7 +135,7 @@
     /* Trust-bar adjustments */
     .trust-bar .shell { max-width: 1100px; margin: 0 auto; }
 
-    /* Accessibility: visible focus for links */
+    /* Accessibility */
     a:focus { outline: 3px solid rgba(201,162,39,0.9); outline-offset: 3px; }
 
     /* ===== Improved FAQ ===== */
@@ -242,6 +238,33 @@
       .mobilebar { display: none; }
     }
 
+    /* ===== Fix Mobile Header (important) ===== */
+    @media (max-width: 950px) {
+      .top-nav {
+        display: none !important;
+      }
+
+      .header-inner {
+        height: 68px;
+        padding: 0 12px;
+        gap: 10px;
+      }
+
+      .brand__tag {
+        display: none !important;
+      }
+
+      .brand__name {
+        font-size: 15px;
+      }
+
+      .button--outline {
+        padding: 8px 11px !important;
+        font-size: 13px !important;
+        white-space: nowrap;
+      }
+    }
+
     /* Responsive adjustments */
     @media (max-width: 720px) {
       .hero { padding: 80px 0; }
@@ -254,330 +277,282 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header" id="top">
-  <div class="shell header-inner">
-    <a class="brand" href="#top" aria-label="Lost Legends home">
-      <img src="logo.jpeg" alt="Lost Legends logo" class="brand__logo" width="64" height="64" />
-      <span class="brand__text">
-        <strong class="brand__name">Lost Legends</strong>
-        <span class="brand__tag">Metal Detection &amp; Recovery</span>
-      </span>
-    </a>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Lost Legends home">
+        <img src="logo.jpeg" alt="Lost Legends logo" class="brand__logo" width="64" height="64" />
+        <span class="brand__text">
+          <strong class="brand__name">Lost Legends</strong>
+          <span class="brand__tag">Metal Detection &amp; Recovery</span>
+        </span>
+      </a>
 
-    <nav class="top-nav" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#quote">Quote</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#quote">Quote</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-    <a href="tel:+14023096379" class="button button--outline" aria-label="Call Lost Legends">
-      (402) 309-6379
-    </a>
-  </div>
-</header>
-
-<main id="main">
-
-<section class="hero" aria-label="Hero">
-  <div class="hero__inner shell">
-    <div class="hero__kicker">Serving All of Nebraska & All of Iowa</div>
-    <h1>Reuniting You With What Matters Most</h1>
-    <p class="hero__lead">
-      Whether it’s a lost wedding ring or a buried property marker, I provide 
-      <strong>superior results</strong> through relentless determination and professional equipment.
-    </p>
-    <div class="hero__buttons" role="group" aria-label="Hero actions">
-      <a href="tel:+14023096379" class="button button--dark">Call</a>
-      <a href="sms:+14023096379" class="button button--light">Text</a>
-      <a href="#quote" class="button button--gold">Get a Quote</a>
+      <a href="tel:+14023096379" class="button button--outline" aria-label="Call Lost Legends">
+        (402) 309-6379
+      </a>
     </div>
-    <a href="https://theringfinders.com/Alex.Kaffenberger/" target="_blank" rel="noopener noreferrer" aria-label="Verified Member of The Ring Finders Network">
-      <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" class="trust-badge-hero" width="140" height="140">
-    </a>
-  </div>
-</section>
+  </header>
 
-<div class="trust-bar" style="background: #1a1a1a; color: #fff; padding: 30px 0; text-align: center; border-top: 2px solid #c9a227; border-bottom: 2px solid #c9a227;">
-  <div class="shell">
-    <p style="margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; color: #c9a227; font-weight: bold; font-size: 0.85rem;">Extensive Field Experience</p>
-    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; font-size: 0.95rem;">
-      <div>✓ Proven Recovery Record</div>
-      <div>✓ Clean Professional Work</div>
-      <div>✓ Fast Response Times</div>
-      <div>✓ Professional-Grade Equipment</div>
-    </div>
-  </div>
-</div>
+  <main id="main">
 
-<section id="services" class="section">
-  <div class="shell">
-    <h2>Statewide Services</h2>
-    <p class="note">Professionalism and precision across both Nebraska and Iowa.</p>
-    <div class="services__grid">
-      <article class="card card--featured service">
-        <div class="service__top">
-          <h3>Lost Item Recovery</h3>
-          <div class="service__prices">
-            <span class="service__chip">Reward Basis</span>
-          </div>
+    <section class="hero" aria-label="Hero">
+      <div class="hero__inner shell">
+        <div class="hero__kicker">Serving All of Nebraska & All of Iowa</div>
+        <h1>Reuniting You With What Matters Most</h1>
+        <p class="hero__lead">
+          Whether it’s a lost wedding ring or a buried property marker, I provide 
+          <strong>superior results</strong> through relentless determination and professional equipment.
+        </p>
+        <div class="hero__buttons" role="group" aria-label="Hero actions">
+          <a href="tel:+14023096379" class="button button--dark">Call</a>
+          <a href="sms:+14023096379" class="button button--light">Text</a>
+          <a href="#quote" class="button button--gold">Get a Quote</a>
         </div>
-        <p>
-          As a top specialist in the region, I work on a <strong>Reward Basis</strong>. 
-          With a history of finding items others missed, you decide the value of the recovery once the item is found.
-        </p>
-        <ul class="list">
-          <li>Rings, watches, and high-value jewelry</li>
-          <li>Advanced water & magnet recovery</li>
-          <li>Minimal-impact, professional digging</li>
-        </ul>
-      </article>
-
-      <article class="card service">
-        <div class="service__top">
-          <h3>Pinpoint Locating</h3>
-          <div class="service__prices">
-            <span class="service__chip">$75 / pin</span>
-          </div>
-        </div>
-        <p>
-          Accurately finding property pins and buried markers 
-          with more determination than the competition.
-        </p>
-        <ul class="list">
-          <li>Property markers & corner pins</li>
-          <li>Curb stops and water valves</li>
-          <li>Clear flagging and site marking</li>
-        </ul>
-      </article>
-
-      <article class="card service">
-        <div class="service__top">
-          <h3>Junk Metal Cleanup</h3>
-          <div class="service__prices">
-            <span class="service__chip">$89 / hour</span>
-          </div>
-        </div>
-        <p>
-          Complete surface and subsurface cleanup of nails, wire, and scrap metal 
-          from farms, yards, and job sites across NE and IA.
-        </p>
-        <ul class="list">
-          <li>Magnetic sweeping & deep detection</li>
-          <li>Agricultural & residential debris removal</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="work" class="section section--soft">
-  <div class="shell">
-    <h2>A History of Successful Recoveries</h2>
-    <p class="note">I take pride in outworking the competition to find your legends.</p>
-    <div class="gallery">
-      <figure class="shot">
-        <img src="IMG_7475.jpeg" alt="Recovered 18k Cartier Trinity Gold Ring" loading="lazy" width="1200" height="800">
-        <figcaption>Found: Authentic Cartier Trinity ring recovered in the field.</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="IMG_0673.jpeg" alt="Alex conducting a systematic grid search" loading="lazy" width="1200" height="800">
-        <figcaption>Systematic scanning for 100% ground coverage.</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="IMG_5272.jpeg" alt="On-site metal detection recovery at night" loading="lazy" width="1200" height="800">
-        <figcaption>Available 24/7 for urgent recoveries across the Midwest.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="section">
-  <div class="shell">
-    <h2>About Alex & Lost Legends</h2>
-    <div class="quote-grid">
-      <div>
-        <p class="big">Young, determined, and dedicated to being the best in Nebraska & Iowa.</p>
-        <p class="note">
-          Hey, I'm <strong>Alex</strong>. I've built my reputation on a simple promise: 
-          I will work harder and smarter than anyone else to find what you've lost. 
-          Whether it's a luxury ring or a buried property line, I treat every search as a personal mission.
-        </p>
-        <ul class="list">
-          <li><strong>Relentless Drive:</strong> I don't stop until every lead is exhausted.</li>
-          <li><strong>Professionalism:</strong> Neat digging, tidy refills, and total privacy.</li>
-          <li><strong>Vast Expertise:</strong> Expert knowledge of local soil conditions.</li>
-        </ul>
+        <a href="https://theringfinders.com/Alex.Kaffenberger/" target="_blank" rel="noopener noreferrer" aria-label="Verified Member of The Ring Finders Network">
+          <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" class="trust-badge-hero" width="140" height="140">
+        </a>
       </div>
-      <div class="about__sidebar">
-        <img src="IMG_5575.jpeg" alt="Alex, Lost Legends Metal Detection Specialist" class="about__photo" loading="lazy" width="800" height="800">
+    </section>
+
+    <div class="trust-bar" style="background: #1a1a1a; color: #fff; padding: 30px 0; text-align: center; border-top: 2px solid #c9a227; border-bottom: 2px solid #c9a227;">
+      <div class="shell">
+        <p style="margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; color: #c9a227; font-weight: bold; font-size: 0.85rem;">Extensive Field Experience</p>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; font-size: 0.95rem;">
+          <div>✓ Proven Recovery Record</div>
+          <div>✓ Clean Professional Work</div>
+          <div>✓ Fast Response Times</div>
+          <div>✓ Professional-Grade Equipment</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="services" class="section">
+      <div class="shell">
+        <h2>Statewide Services</h2>
+        <p class="note">Professionalism and precision across both Nebraska and Iowa.</p>
+        <div class="services__grid">
+          <article class="card card--featured service">
+            <div class="service__top">
+              <h3>Lost Item Recovery</h3>
+              <div class="service__prices">
+                <span class="service__chip">Reward Basis</span>
+              </div>
+            </div>
+            <p>
+              As a top specialist in the region, I work on a <strong>Reward Basis</strong>. 
+              With a history of finding items others missed, you decide the value of the recovery once the item is found.
+            </p>
+            <ul class="list">
+              <li>Rings, watches, and high-value jewelry</li>
+              <li>Advanced water & magnet recovery</li>
+              <li>Minimal-impact, professional digging</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <div class="service__top">
+              <h3>Pinpoint Locating</h3>
+              <div class="service__prices">
+                <span class="service__chip">$75 / pin</span>
+              </div>
+            </div>
+            <p>
+              Accurately finding property pins and buried markers 
+              with more determination than the competition.
+            </p>
+            <ul class="list">
+              <li>Property markers & corner pins</li>
+              <li>Curb stops and water valves</li>
+              <li>Clear flagging and site marking</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <div class="service__top">
+              <h3>Junk Metal Cleanup</h3>
+              <div class="service__prices">
+                <span class="service__chip">$89 / hour</span>
+              </div>
+            </div>
+            <p>
+              Complete surface and subsurface cleanup of nails, wire, and scrap metal 
+              from farms, yards, and job sites across NE and IA.
+            </p>
+            <ul class="list">
+              <li>Magnetic sweeping & deep detection</li>
+              <li>Agricultural & residential debris removal</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section section--soft">
+      <div class="shell">
+        <h2>A History of Successful Recoveries</h2>
+        <p class="note">I take pride in outworking the competition to find your legends.</p>
+        <div class="gallery">
+          <figure class="shot">
+            <img src="IMG_7475.jpeg" alt="Recovered 18k Cartier Trinity Gold Ring" loading="lazy" width="1200" height="800">
+            <figcaption>Found: Authentic Cartier Trinity ring recovered in the field.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="IMG_0673.jpeg" alt="Alex conducting a systematic grid search" loading="lazy" width="1200" height="800">
+            <figcaption>Systematic scanning for 100% ground coverage.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="IMG_5272.jpeg" alt="On-site metal detection recovery at night" loading="lazy" width="1200" height="800">
+            <figcaption>Available 24/7 for urgent recoveries across the Midwest.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="shell">
+        <h2>About Alex & Lost Legends</h2>
+        <div class="quote-grid">
+          <div>
+            <p class="big">Young, determined, and dedicated to being the best in Nebraska & Iowa.</p>
+            <p class="note">
+              Hey, I'm <strong>Alex</strong>. I've built my reputation on a simple promise: 
+              I will work harder and smarter than anyone else to find what you've lost. 
+              Whether it's a luxury ring or a buried property line, I treat every search as a personal mission.
+            </p>
+            <ul class="list">
+              <li><strong>Relentless Drive:</strong> I don't stop until every lead is exhausted.</li>
+              <li><strong>Professionalism:</strong> Neat digging, tidy refills, and total privacy.</li>
+              <li><strong>Vast Expertise:</strong> Expert knowledge of local soil conditions.</li>
+            </ul>
+          </div>
+          <div class="about__sidebar">
+            <img src="IMG_5575.jpeg" alt="Alex, Lost Legends Metal Detection Specialist" class="about__photo" loading="lazy" width="800" height="800">
+            <div class="card" style="margin-top:14px; border-left: 4px solid #c9a227;">
+              <h3 style="margin-bottom:6px;">Direct Line to Alex</h3>
+              <p class="tiny">Text these details for the fastest response:</p>
+              <ul class="list">
+                <li><strong>Item:</strong> What was lost?</li>
+                <li><strong>Where:</strong> Address or GPS pin</li>
+                <li><strong>Photo:</strong> Pic of the search area</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section--soft">
+      <div class="shell">
+        <h2>Frequently Asked Questions</h2>
+        <p class="note">Everything you need to know about professional metal detection & recovery in Nebraska and Iowa.</p>
         
-        <div class="card" style="margin-top:14px; border-left: 4px solid #c9a227;">
-          <h3 style="margin-bottom:6px;">Direct Line to Alex</h3>
-          <p class="tiny">Text these details for the fastest response:</p>
-          <ul class="list">
-            <li><strong>Item:</strong> What was lost?</li>
-            <li><strong>Where:</strong> Address or GPS pin</li>
-            <li><strong>Photo:</strong> Pic of the search area</li>
-          </ul>
+        <div class="faq-list">
+          <details>
+            <summary>What areas do you serve?</summary>
+            <p>I serve <strong>all of Nebraska and all of Iowa</strong>. Whether you're in Omaha, Lincoln, Des Moines, Plattsmouth, Sioux City, or anywhere in between, I can travel to you — often the same day for urgent recoveries.</p>
+          </details>
+          <details>
+            <summary>How does pricing work?</summary>
+            <p><strong>Lost item recovery</strong> (rings, jewelry, watches, etc.) is performed on a <strong>reward basis</strong> — you only pay what you feel the recovery is worth once your item is returned.<br><br>
+            <strong>Property pin locating</strong> is $75 per pin.<br>
+            <strong>Junk metal cleanup</strong> is $89 per hour.</p>
+          </details>
+          <details>
+            <summary>How quickly can you respond?</summary>
+            <p>I check messages frequently and am often available the same day or next day, including evenings and weekends. For high-value or time-sensitive losses (wedding rings, heirlooms, etc.), I prioritize getting out as fast as possible.</p>
+          </details>
+          <details>
+            <summary>What are the chances of actually finding my item?</summary>
+            <p>Success depends on several factors: how soon you contact me after the loss, accuracy of the location, and whether the item is still there. Many recoveries happen even after other searchers have already tried and given up.</p>
+          </details>
+          <details>
+            <summary>Do you find items in water or snow?</summary>
+            <p>Yes. I have specialized waterproof equipment and strong magnets for water recoveries (lakes, ponds, rivers, pools). I also regularly search in snow and frozen ground across Nebraska and Iowa.</p>
+          </details>
+          <details>
+            <summary>How should I prepare before you arrive?</summary>
+            <p>Provide the most accurate location possible (address + GPS pin if available), recent photos of the area, and details about when and how the item was lost. Mark the general area if you can.</p>
+          </details>
+          <details>
+            <summary>Will my yard or property be damaged?</summary>
+            <p>No. I use precise probing and surgical digging techniques. All holes are refilled neatly and turf is replaced so the area looks undisturbed. Privacy and respect for your property are top priorities.</p>
+          </details>
+          <details>
+            <summary>Do you work with The Ring Finders network?</summary>
+            <p>Yes — I am a verified member of The Ring Finders, an international directory of professional metal detecting recovery specialists. This network has helped return thousands of lost items worldwide.</p>
+          </details>
+          <details>
+            <summary>What if you don't find it?</summary>
+            <p>You pay nothing for unsuccessful lost-item recoveries (other than any agreed travel fee for very remote locations). I will still give you a full report of the search and tips to prevent future losses.</p>
+          </details>
+          <details>
+            <summary>What items do you commonly recover?</summary>
+            <p>Wedding bands, engagement rings, family heirlooms, watches, keys, phones, property pins, survey markers, and even larger lost tools or equipment on farms and job sites.</p>
+          </details>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="faq" class="section section--soft">
-  <div class="shell">
-    <h2>Frequently Asked Questions</h2>
-    <p class="note">Everything you need to know about professional metal detection & recovery in Nebraska and Iowa.</p>
-    
-    <div class="faq-list">
-      <details>
-        <summary>What areas do you serve?</summary>
-        <p>I serve <strong>all of Nebraska and all of Iowa</strong>. Whether you're in Omaha, Lincoln, Des Moines, Plattsmouth, Sioux City, or anywhere in between, I can travel to you — often the same day for urgent recoveries.</p>
-      </details>
+    <section id="quote" class="section">
+      <div class="shell">
+        <h2>Request a Statewide Quote</h2>
+        <div class="quote-grid">
+          <div>
+            <p class="big">The most reliable help in the Midwest.</p>
+            <p class="note">Available for immediate travel to your location in NE or IA.</p>
+            <div class="inline-buttons" style="margin: 20px 0;">
+              <a href="tel:+14023096379" class="button button--dark">Call Now</a>
+              <a href="sms:+14023096379" class="button button--light">Text Now</a>
+            </div>
+          </div>
 
-      <details>
-        <summary>How does pricing work?</summary>
-        <p><strong>Lost item recovery</strong> (rings, jewelry, watches, etc.) is performed on a <strong>reward basis</strong> — you only pay what you feel the recovery is worth once your item is returned.<br><br>
-        <strong>Property pin locating</strong> is $75 per pin.<br>
-        <strong>Junk metal cleanup</strong> is $89 per hour.</p>
-      </details>
-
-      <details>
-        <summary>How quickly can you respond?</summary>
-        <p>I check messages frequently and am often available the same day or next day, including evenings and weekends. For high-value or time-sensitive losses (wedding rings, heirlooms, etc.), I prioritize getting out as fast as possible.</p>
-      </details>
-
-      <details>
-        <summary>What are the chances of actually finding my item?</summary>
-        <p>Success depends on several factors: how soon you contact me after the loss, accuracy of the location, and whether the item is still there. Many recoveries happen even after other searchers have already tried and given up.</p>
-      </details>
-
-      <details>
-        <summary>Do you find items in water or snow?</summary>
-        <p>Yes. I have specialized waterproof equipment and strong magnets for water recoveries (lakes, ponds, rivers, pools). I also regularly search in snow and frozen ground across Nebraska and Iowa.</p>
-      </details>
-
-      <details>
-        <summary>How should I prepare before you arrive?</summary>
-        <p>Provide the most accurate location possible (address + GPS pin if available), recent photos of the area, and details about when and how the item was lost. Mark the general area if you can.</p>
-      </details>
-
-      <details>
-        <summary>Will my yard or property be damaged?</summary>
-        <p>No. I use precise probing and surgical digging techniques. All holes are refilled neatly and turf is replaced so the area looks undisturbed. Privacy and respect for your property are top priorities.</p>
-      </details>
-
-      <details>
-        <summary>Do you work with The Ring Finders network?</summary>
-        <p>Yes — I am a verified member of The Ring Finders, an international directory of professional metal detecting recovery specialists. This network has helped return thousands of lost items worldwide.</p>
-      </details>
-
-      <details>
-        <summary>What if you don't find it?</summary>
-        <p>You pay nothing for unsuccessful lost-item recoveries (other than any agreed travel fee for very remote locations). I will still give you a full report of the search and tips to prevent future losses.</p>
-      </details>
-
-      <details>
-        <summary>What items do you commonly recover?</summary>
-        <p>Wedding bands, engagement rings, family heirlooms, watches, keys, phones, property pins, survey markers, and even larger lost tools or equipment on farms and job sites.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="quote" class="section">
-  <div class="shell">
-    <h2>Request a Statewide Quote</h2>
-    <div class="quote-grid">
-      <div>
-        <p class="big">The most reliable help in the Midwest.</p>
-        <p class="note">Available for immediate travel to your location in NE or IA.</p>
-        <div class="inline-buttons" style="margin: 20px 0;">
-          <a href="tel:+14023096379" class="button button--dark">Call Now</a>
-          <a href="sms:+14023096379" class="button button--light">Text Now</a>
+          <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form" aria-label="Request a quote">
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_next" value="/thank-you.html" />
+            <input type="tel" name="phone" placeholder="Phone number (required)" required inputmode="tel" autocomplete="tel" />
+            <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
+            <input type="text" name="item" placeholder="What was lost? (ring, keys, etc.)" />
+            <input type="text" name="location" placeholder="Location / nearest town or address" />
+            <input type="text" name="when" placeholder="When was it lost? (optional)" />
+            <textarea name="message" placeholder="Any extra details that might help..." autocomplete="off"></textarea>
+            <button type="submit" class="button button--gold">Send Request</button>
+          </form>
         </div>
       </div>
+    </section>
 
-      <form action="https://formspree.io/f/xvzbrqkw" method="POST" class="form" aria-label="Request a quote">
-        <input type="text" name="_gotcha" style="display:none" />
-        <input type="hidden" name="_next" value="/thank-you.html" />
-        <input type="tel" name="phone" placeholder="Phone number (required)" required inputmode="tel" autocomplete="tel" />
-        <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
-        <input type="text" name="item" placeholder="What was lost? (ring, keys, etc.)" />
-        <input type="text" name="location" placeholder="Location / nearest town or address" />
-        <input type="text" name="when" placeholder="When was it lost? (optional)" />
-        <textarea name="message" placeholder="Any extra details that might help..." autocomplete="off"></textarea>
-        <button type="submit" class="button button--gold">Send Request</button>
-      </form>
+  </main>
+
+  <footer class="footer" style="text-align: center; padding: 30px 0;">
+    <div class="shell">
+      <a href="https://theringfinders.com/Alex.Kaffenberger/" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 20px;">
+        <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" style="max-width: 120px; height: auto;" width="120" height="120">
+      </a>
+      <p><strong>Lost Legends Metal Detection &amp; Recovery</strong></p>
+      <p class="tiny">
+        <a href="tel:+14023096379">(402) 309-6379</a> &nbsp;•&nbsp; 
+        Serving Nebraska & Iowa
+      </p>
+      <p class="tiny">&copy; 2026 Lost Legends</p>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bar -->
+  <div class="mobilebar" role="navigation">
+    <div class="mobilebar__inner">
+      <a class="mobilebar__btn mobilebar__btn--dark" href="tel:+14023096379">Call</a>
+      <a class="mobilebar__btn mobilebar__btn--dark" href="sms:+14023096379">Text</a>
+      <a class="mobilebar__btn mobilebar__btn--wa" href="https://wa.me/14023096379" rel="noopener noreferrer">WhatsApp</a>
     </div>
   </div>
-</section>
-
-</main>
-
-<footer class="footer" style="text-align: center; padding: 30px 0;">
-  <div class="shell">
-    <a href="https://theringfinders.com/Alex.Kaffenberger/" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 20px;">
-      <img src="IMG_7499.png" alt="Verified Member of The Ring Finders Network" style="max-width: 120px; height: auto;" width="120" height="120">
-    </a>
-    
-    <p><strong>Lost Legends Metal Detection &amp; Recovery</strong></p>
-    <p class="tiny">
-      <a href="tel:+14023096379">(402) 309-6379</a> &nbsp;•&nbsp; 
-      Serving Nebraska & Iowa
-    </p>
-    <p class="tiny">&copy; 2026 Lost Legends</p>
-  </div>
-</footer>
-
-<!-- Sticky Mobile Bar -->
-<div class="mobilebar" role="navigation">
-  <div class="mobilebar__inner">
-    <a class="mobilebar__btn mobilebar__btn--dark" href="tel:+14023096379">Call</a>
-    <a class="mobilebar__btn mobilebar__btn--dark" href="sms:+14023096379">Text</a>
-    <a class="mobilebar__btn mobilebar__btn--wa" href="https://wa.me/14023096379" rel="noopener noreferrer">WhatsApp</a>
-  </div>
-</div>
 
 </body>
 </html>
-
-<style>
-  /* ... all your existing styles ... */
-
-  @media (max-width: 720px) {
-    .hero { padding: 80px 0; }
-    .hero h1 { font-size: 1.6rem; line-height: 1.15; }
-    .trust-bar .shell > div { display:flex; flex-direction:column; align-items:center; gap:10px; }
-  }
-
-  /* ===== Fix Mobile Header ===== */
-  @media (max-width: 950px) {
-    .top-nav {
-      display: none !important;
-    }
-
-    .header-inner {
-      height: 68px;
-      padding: 0 12px;
-      gap: 10px;
-    }
-
-    .brand__tag {
-      display: none;
-    }
-
-    .brand__name {
-      font-size: 15px;
-    }
-
-    .button--outline {
-      padding: 8px 11px;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-  }
-</style>
