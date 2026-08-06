@@ -23,27 +23,43 @@
 
   <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Lost Legends Metal Detection & Recovery",
-    "description": "Lost item recovery (rings, jewelry, and valuables) on a reward basis, property pin locating, water valve locating, and junk metal cleanup across Nebraska and Iowa.",
-    "url": "https://lostlegendsrecovery.com",
-    "telephone": "+1-402-309-6379",
-    "image": "https://lostlegendsrecovery.com/logo.jpeg",
-    "priceRange": "$$",
-    "areaServed": [
-      { "@type": "State", "name": "Nebraska" },
-      { "@type": "State", "name": "Iowa" }
-    ],
-    "serviceType": [
-      "Lost Item Recovery",
-      "Property Pin Locating",
-      "Water Valve Locating",
-      "Junk Metal Cleanup"
-    ]
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lost Legends Metal Detection & Recovery",
+  "description": "Lost item recovery (rings, jewelry, and valuables) on a reward basis, property pin locating, water valve locating, and junk metal cleanup across Nebraska and Iowa.",
+  "url": "https://lostlegendsrecovery.com",
+  "telephone": "+1-402-309-6379",
+  "image": "https://lostlegendsrecovery.com/logo.jpeg",
+  "priceRange": "$$",
+  "areaServed": [
+    { "@type": "State", "name": "Nebraska" },
+    { "@type": "State", "name": "Iowa" }
+  ],
+  "serviceType": [
+    "Lost Item Recovery",
+    "Property Pin Locating",
+    "Water Valve Locating",
+    "Junk Metal Cleanup"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/1DXwpQeA4J/?mibextid=wwXIfr",
+    "https://theringfinders.com/Alex.Kaffenberger/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Omaha",
+    "addressRegion": "NE",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.2565,
+    "longitude": -95.9345
   }
-  </script>
+}
+</script>
+
 
   <style>
   /* Skip-link */
@@ -430,26 +446,31 @@
       </div>
     </section>
 
-    <section id="work" class="section section--soft">
-      <div class="shell">
-        <h2>A History of Successful Recoveries</h2>
-        <p class="note">I take pride in outworking the competition to find your legends.</p>
-        <div class="gallery">
-          <figure class="shot">
-            <img src="IMG_7475.jpeg" alt="Recovered 18k Cartier Trinity Gold Ring" loading="lazy" width="1200" height="800">
-            <figcaption>Found: Authentic Cartier Trinity ring recovered in the field.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="IMG_0673.jpeg" alt="Alex conducting a systematic grid search" loading="lazy" width="1200" height="800">
-            <figcaption>Systematic scanning for 100% ground coverage.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="IMG_5272.jpeg" alt="On-site metal detection recovery at night" loading="lazy" width="1200" height="800">
-            <figcaption>Available 24/7 for urgent recoveries across the Midwest.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+    <section id="work">
+  <h2>A History of Successful Recoveries</h2>
+  <p>I take pride in outworking the competition to find your legends.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="IMG_7475.jpeg" alt="Recovered 18k Cartier Trinity Gold Ring" loading="lazy" width="1200" height="800"
+           srcset="IMG_7475.jpeg 1200w"
+           sizes="(max-width:600px) 100vw, 600px">
+      <p>Recovered 18k Cartier Trinity Gold Ring</p>
+    </div>
+    <div class="gallery-item">
+      <img src="IMG_0673.jpeg" alt="Alex conducting a systematic grid search" loading="lazy" width="1200" height="800"
+           srcset="IMG_0673.jpeg 1200w"
+           sizes="(max-width:600px) 100vw, 600px">
+      <p>Alex conducting a systematic grid search</p>
+    </div>
+    <div class="gallery-item">
+      <img src="IMG_5272.jpeg" alt="On-site metal detection recovery at night" loading="lazy" width="1200" height="800"
+           srcset="IMG_5272.jpeg 1200w"
+           sizes="(max-width:600px) 100vw, 600px">
+      <p>On-site metal detection recovery at night</p>
+    </div>
+  </div>
+</section>
+
 
     <section id="about" class="section">
       <div class="shell">
