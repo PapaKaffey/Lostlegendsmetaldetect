@@ -21,41 +21,135 @@ Him<!DOCTYPE html>
   <noscript><link rel="stylesheet" href="style.css"></noscript>
   <link rel="icon" type="image/jpeg" href="logo.jpeg" />
 
-  <!-- LocalBusiness Schema -->
-  <script type="application/ld+json">
+<!-- LocalBusiness + ProfessionalService Schema -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "name": "Lost Legends Metal Detection & Recovery",
-  "description": "Lost item recovery (rings, jewelry, and valuables) on a reward basis, property pin locating, water valve locating, and junk metal cleanup across Nebraska and Iowa.",
+  "description": "Fast, careful recovery of lost wedding rings, jewelry, keys, property markers, and valuable heirlooms in the Omaha metro area, Cass County, and surrounding Nebraska regions.",
   "url": "https://lostlegendsrecovery.com",
   "telephone": "+1-402-309-6379",
-  "image": "https://lostlegendsrecovery.com/logo.jpeg",
-  "priceRange": "$$",
-  "areaServed": [
-    { "@type": "State", "name": "Nebraska" },
-    { "@type": "State", "name": "Iowa" }
-  ],
-  "serviceType": [
-    "Lost Item Recovery",
-    "Property Pin Locating",
-    "Water Valve Locating",
-    "Junk Metal Cleanup"
-  ],
-  "sameAs": [
-    "https://www.facebook.com/share/1DXwpQeA4J/?mibextid=wwXIfr",
-    "https://theringfinders.com/Alex.Kaffenberger/"
-  ],
+  "email": "alex@lostlegendsrecovery.com",
+  "logo": "https://lostlegendsrecovery.com/logo.jpeg",
+  "image": "https://lostlegendsrecovery.com/IMG_0673.jpeg",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Omaha",
+    "addressLocality": "Plattsmouth",
     "addressRegion": "NE",
+    "postalCode": "68048",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 41.2565,
-    "longitude": -95.9345
+    "latitude": 41.0117,
+    "longitude": -95.8828
+  },
+  "areaServed": [
+  { "@type": "State", "name": "Nebraska" },
+  { "@type": "State", "name": "Iowa" },
+  { "@type": "City", "name": "Plattsmouth" },
+  { "@type": "City", "name": "Omaha" },
+  { "@type": "City", "name": "Bellevue" },
+  { "@type": "City", "name": "Papillion" },
+  { "@type": "City", "name": "Nebraska City" },
+  { "@type": "City", "name": "Council Bluffs" },
+  { "@type": "AdministrativeArea", "name": "Cass County" }
+]
+  "priceRange": "$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Metal Detection & Recovery Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lost Ring & Jewelry Recovery"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Property Pin Locating"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Water Valve Locating"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Shallow Water & Magnet Assists"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://theringfinders.com/Alex.Kaffenberger/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+1-402-309-6379"
+  }
+}
+</script>
+    { "@type": "City", "name": "Omaha" },
+    { "@type": "City", "name": "Bellevue" },
+    { "@type": "City", "name": "Papillion" },
+    { "@type": "City", "name": "Nebraska City" },
+    { "@type": "City", "name": "Council Bluffs" },
+    { "@type": "AdministrativeArea", "name": "Cass County" }
+  ],
+  "priceRange": "$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Metal Detection & Recovery Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lost Ring & Jewelry Recovery"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Property Pin Locating"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Water Valve Locating"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Shallow Water & Magnet Assists"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://theringfinders.com/Alex.Kaffenberger/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+1-402-309-6379"
   }
 }
 </script>
