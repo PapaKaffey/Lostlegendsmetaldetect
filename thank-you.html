@@ -1,70 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Lost Legends</title>
-  <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1a1a1a">
+  <title>Request Sent | Lost Legends Metal Detection &amp; Recovery</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #f6f1e9;
-      padding: 20px;
-    }
-    .thank-you-card {
-      max-width: 520px;
-      width: 100%;
-      background: white;
-      border-radius: 16px;
-      padding: 40px 28px;
-      text-align: center;
-      box-shadow: 0 14px 40px rgba(0,0,0,.10);
-    }
-    .thank-you-card h1 {
-      margin: 0 0 12px;
-      font-size: 1.55rem;
-      line-height: 1.25;
-      color: #111;
-    }
-    .thank-you-card p {
-      margin: 0 0 28px;
-      color: #6b625a;
-      font-size: 1.05rem;
-    }
-    .thank-you-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .thank-you-actions .button {
-      width: 100%;
-      justify-content: center;
-    }
-    .back-link {
-      display: inline-block;
-      margin-top: 24px;
-      color: #c96a1b;
-      text-decoration: none;
-      font-weight: 600;
-    }
+  :root {
+    --gold: #c9a227;
+    --ink: #111;
+  }
+
+  body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    place-items: center;
+    padding: 24px;
+    background: #f7f5ef;
+    color: var(--ink);
+    font-family: system-ui, sans-serif;
+  }
+
+  .confirmation {
+    width: min(100%, 620px);
+    padding: clamp(28px, 6vw, 56px);
+    border-top: 5px solid var(--gold);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    text-align: center;
+  }
+
+  .confirmation__eyebrow {
+    margin: 0 0 10px;
+    color: #806300;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .confirmation h1 {
+    margin: 0;
+  }
+
+  .confirmation p {
+    margin: 18px auto 0;
+    max-width: 52ch;
+    line-height: 1.6;
+  }
+
+  .confirmation__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .confirmation__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 16px;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .confirmation__button--gold {
+    border-color: var(--gold);
+    background: var(--gold);
+  }
+
+  :where(a):focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #6d5200;
+  }
   </style>
 </head>
 <body>
-  <div class="thank-you-card">
-    <h1>Got it — I’ll text or call you back as soon as possible</h1>
-    <p>Thanks for reaching out. I usually reply the same day.</p>
-
-    <div class="thank-you-actions">
-      <a href="tel:+14023096379" class="button button--dark">Call (402) 309-6379</a>
-      <a href="sms:+14023096379" class="button button--light">Text (402) 309-6379</a>
+  <main class="confirmation" id="main" tabindex="-1">
+    <p class="confirmation__eyebrow">Lost Legends</p>
+    <h1>Thanks—your request was sent.</h1>
+    <p>Alex will review your information and respond as soon as possible. For an urgent recovery, calling or texting is the fastest option.</p>
+    <div class="confirmation__actions">
+      <a class="confirmation__button confirmation__button--gold" href="tel:+14023096379">Call (402) 309-6379</a>
+      <a class="confirmation__button" href="sms:+14023096379">Text Alex</a>
+      <a class="confirmation__button" href="/">Return to the site</a>
     </div>
-
-    <a href="/" class="back-link">← Back to homepage</a>
-  </div>
+  </main>
 </body>
 </html>
