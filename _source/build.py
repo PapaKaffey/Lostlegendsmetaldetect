@@ -11,8 +11,9 @@ OUT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://lostlegendsrecovery.com"
 NAME = "Lost Legends Metal Detection & Recovery"
 PHONE = "(402) 309-6379"
-TEL = "tel:+14023096379"
-SMS = "sms:+14023096379"
+PHONE_E164 = "+14023096379"
+TEL = "tel:" + PHONE_E164
+SMS = "sms:" + PHONE_E164
 TEXT_CHECKLIST = "For the fastest reply, text the item, an address or GPS pin, and a photo of the search area."
 EMAIL = "LostLegendsRecovery@gmail.com"
 PROFILE = "https://theringfinders.com/Alex.Kaffenberger/"
@@ -74,17 +75,66 @@ def asset_url(name):
     return f"/site-assets/{name}?v={version}"
 
 
+def price_label(service):
+    if "rate" in service:
+        return f"${service['rate']} per {service['unit']}"
+    return service["price"]
+
+
+def service_offer(service):
+    url = f"{DOMAIN}/{service['slug']}/"
+    offer = {
+        "@type": "Offer", "@id": url + "#offer", "url": url,
+        "name": f"{service['name']} ({price_label(service)})",
+        "description": service["summary"],
+        "itemOffered": {
+            "@type": "Service", "@id": url + "#service",
+            "name": service["name"], "url": url,
+            "provider": {"@id": DOMAIN + "/#business"},
+        },
+    }
+    if "rate" in service:
+        offer["priceSpecification"] = {
+            "@type": "UnitPriceSpecification", "price": service["rate"],
+            "priceCurrency": "USD", "unitText": service["unit"],
+        }
+    return offer
+
+
 def shell(title, desc, body, path="/", og_image=HOME_SOCIAL, faqs=(), article=False, index=True, service=None):
     canonical = DOMAIN + path
     title = escape(title, quote=True)
     desc = escape(desc, quote=True)
     structured = {
         "@type": "LocalBusiness", "@id": DOMAIN + "/#business", "name": NAME, "url": DOMAIN + "/",
-        "telephone": "+14023096379", "email": EMAIL, "image": HOME_SOCIAL, "logo": DOMAIN + "/site-assets/lost-legends-seal.webp",
-        "address": {"@type": "PostalAddress", "addressLocality": "Plattsmouth", "addressRegion": "NE", "addressCountry": "US"},
-        "areaServed": ["Omaha metro", "Council Bluffs, Iowa", "Cass County, Nebraska", "Nebraska City, Nebraska"],
+        "description": "Lost ring and jewelry recovery, existing property marker locating, and junk metal cleanup. Based in Plattsmouth and serving the Omaha metro, southeast Nebraska, and southwest Iowa. Farther travel is by arrangement.",
+        "telephone": PHONE_E164, "email": EMAIL, "image": HOME_SOCIAL, "logo": DOMAIN + "/site-assets/lost-legends-seal.webp",
+        "address": {
+            "@type": "PostalAddress", "addressLocality": "Plattsmouth", "addressRegion": "NE",
+            "postalCode": "68048", "addressCountry": "US",
+        },
+        "geo": {"@type": "GeoCoordinates", "name": "Plattsmouth, Nebraska", "latitude": 41.0117, "longitude": -95.8828},
+        "areaServed": [
+            {"@type": "Place", "name": "Omaha metro"},
+            {"@type": "City", "name": "Plattsmouth, Nebraska"},
+            {"@type": "City", "name": "Omaha, Nebraska"},
+            {"@type": "City", "name": "Bellevue, Nebraska"},
+            {"@type": "City", "name": "Papillion, Nebraska"},
+            {"@type": "City", "name": "Gretna, Nebraska"},
+            {"@type": "City", "name": "Council Bluffs, Iowa"},
+            {"@type": "AdministrativeArea", "name": "Cass County, Nebraska"},
+            {"@type": "City", "name": "Nebraska City, Nebraska"},
+        ],
+        "priceRange": "$",
+        "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": PHONE_E164},
+        "hasOfferCatalog": {"@id": DOMAIN + "/#service-catalog"},
         "founder": {"@type": "Person", "name": "Alex Kaffenberger"}, "sameAs": [PROFILE],
     }
+    if path == "/":
+        structured["hasOfferCatalog"].update({
+            "@type": "OfferCatalog", "name": "Metal Detection & Recovery Services",
+            "itemListElement": [service_offer(item) for item in SERVICES],
+        })
     graph = [structured]
     if faqs:
         graph.append({"@type": "FAQPage", "@id": canonical + "#faq", "mainEntity": [
@@ -92,17 +142,18 @@ def shell(title, desc, body, path="/", og_image=HOME_SOCIAL, faqs=(), article=Fa
             for question, answer in faqs
         ]})
     if service:
-        graph.append({"@type": "Service", "name": service["name"], "url": canonical,
+        graph.append({"@type": "Service", "@id": canonical + "#service", "name": service["name"], "url": canonical,
                       "description": service["summary"], "provider": {"@id": structured["@id"]},
-                      "areaServed": structured["areaServed"]})
-    robots = "" if index else '<meta name="robots" content="noindex,follow">'
+                      "areaServed": structured["areaServed"], "offers": service_offer(service)})
+    robots = "index,follow" if index else "noindex,follow"
     schema = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{title}</title><meta name="description" content="{desc}">{robots}
+<title>{title}</title><meta name="description" content="{desc}"><meta name="robots" content="{robots}">
+<meta name="author" content="{escape(NAME)}">
 <link rel="canonical" href="{canonical}">
 <meta name="theme-color" content="#f9f6ed"><meta property="og:type" content="{'article' if article else 'website'}">
-<meta property="og:site_name" content="{escape(NAME)}"><meta property="og:url" content="{canonical}">
+<meta property="og:site_name" content="{escape(NAME)}"><meta property="og:locale" content="en_US"><meta property="og:url" content="{canonical}">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{og_image}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{og_image}">
@@ -158,7 +209,7 @@ def story_card(s):
 
 def service_card(service):
     return f'''<article class="service-card">
-      <div class="service-top"><span class="service-icon">{icon(service["icon"])}</span><span class="service-price">{service["price"]}</span></div>
+      <div class="service-top"><span class="service-icon">{icon(service["icon"])}</span><span class="service-price">{price_label(service)}</span></div>
       <h3><a href="/{service["slug"]}/">{service["name"]}</a></h3>
       <p>{service["summary"]}</p><a class="service-link" href="/{service["slug"]}/" aria-label="About {service["name"].lower()}">View service</a>
     </article>'''
@@ -325,7 +376,7 @@ def service_page(service):
         for heading, copy in service["sections"]
     )
     related = "".join(service_card(other) for other in SERVICES if other != service)
-    return f'''{subpage_header(breadcrumbs("services", "Services"), service["price"], service["heading"], service["lead"], picture, request_href)}
+    return f'''{subpage_header(breadcrumbs("services", "Services"), price_label(service), service["heading"], service["lead"], picture, request_href)}
     <div class="wrap section-pad subpage-body">
       <div class="subpage-copy">{sections}</div>
       <aside class="subpage-side"><h2>Other services</h2><div class="side-cards">{related}</div></aside>

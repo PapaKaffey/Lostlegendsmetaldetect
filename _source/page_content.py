@@ -105,7 +105,7 @@ SERVICES = [
     },
     {
         "slug": "property-pin-locating", "icon": "marker", "name": "Property pin locating",
-        "price": "$75 per marker", "value": "Marker or cover",
+        "rate": 75, "unit": "marker", "value": "Marker or cover",
         "title": "Property Pin Locating in the Omaha Area | $75 per Marker",
         "description": "Alex Kaffenberger locates existing detectable property pins for $75 per marker near Plattsmouth, Bellevue, Omaha, and Council Bluffs. This is not a land survey.",
         "summary": PIN_DISCLAIMER,
@@ -119,7 +119,7 @@ SERVICES = [
     },
     {
         "slug": "junk-metal-cleanup", "icon": "magnet", "name": "Junk metal cleanup",
-        "price": "$89 per hour", "value": "Metal cleanup",
+        "rate": 89, "unit": "hour", "value": "Metal cleanup",
         "title": "Junk Metal Cleanup Near Omaha & Plattsmouth | $89/hr",
         "description": "Request a metal detector sweep for nails, screws, wire, and scrap in yards, farmsteads, or work areas. Lost Legends charges $89 per hour for cleanup.",
         "summary": "Detector sweeps for nails, wire, and scrap in yards, farmsteads, and work areas.",
